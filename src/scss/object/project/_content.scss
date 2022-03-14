@@ -1,0 +1,110 @@
+.p-content {
+  &01 {
+    color: #352a2a;
+    font-weight: 700;
+    $main: &;
+    &__ttl {
+      @include font-line(18, 18);
+      letter-spacing: 1.8px;
+      span {
+        color: #ea422d;
+      }
+    }
+    &__sub {
+      @include font-line(21, 21);
+      letter-spacing: 1.05px;
+      margin: 13px 0 32px;
+    }
+    &__row {
+      border: 1px solid #ea422d;
+      padding: 20px 50px 20px 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 120px;
+      @include is-responsive {
+        flex-direction: column;
+        padding: 40px 26px 40px 20px;
+        margin-bottom: 80px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        @include is-responsive {
+            margin-bottom: 0;
+        }
+      }
+      &:first-child  {
+        img {
+          width: 182.32px;
+        }
+      }
+      &:nth-child(2)  {
+        img {
+          width: 187.21px;
+        }
+      }
+      &:nth-child(3)  {
+        img {
+          width: 197.33px;
+        }
+      }
+    }
+    &__col {
+      img {
+        height: 140px;
+        width: 182.32px;
+      }
+      &:first-child {
+        text-align: center;
+        width: calc(100% - 610px);
+        @include is-responsive {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        text-align: left;
+        width: 610px;
+        border-left: 1px solid #d0d0d0;
+        padding: 0 0 17px;
+        @include is-responsive {
+          border-left: 0;
+          border-top: 1px solid #d0d0d0;
+          margin-top: 40px;
+          width: 100%;
+        }
+        #{$main}__cont {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #d0d0d0;
+          padding: 40px 0;
+          @include is-responsive {
+            flex-direction: column;
+          }
+          &:first-child {
+            padding-top: 25px;
+          }
+          &:last-child {
+            border-bottom: none;
+            padding: 40px 0 0;
+          }
+          p {
+            @include font-line(15, 27);
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            max-width: 361px;
+            padding-left: 30px;
+            @include is-responsive {
+              padding-left: 0;
+              max-width: 100%;
+              padding-bottom: 24px;
+            }
+            span {
+              color: #ea422d;
+            }
+          }
+        }
+      }
+    }
+  }
+}

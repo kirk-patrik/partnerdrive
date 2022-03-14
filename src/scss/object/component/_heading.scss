@@ -1,0 +1,22 @@
+.c-heading {
+  &01 {
+    &__main { 
+    }
+    &__sub {
+    }
+  }
+  &02 {
+    &__main { 
+    }
+    &__sub {
+      @include font-line(24, 36);
+      letter-spacing: 2.4px;
+      color: $color-accent;
+      font-weight: 700;
+      @include is-responsive {
+        @include font-line(20, 32);
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

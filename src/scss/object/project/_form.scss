@@ -1,0 +1,29 @@
+.p-form {
+  $parent: &;
+  &__group {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    #{$parent}__container {
+      flex: 1 1 auto;
+      &:not(:first-child) {
+        margin-left: auto;
+      }
+    }
+    &--buttonArea {
+      margin-top: 2rem;
+      button,
+      a {
+        &:only-child {
+          max-width: 50%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  & > &__container,
+  &__group {
+    margin-bottom: 1rem;
+  }
+}

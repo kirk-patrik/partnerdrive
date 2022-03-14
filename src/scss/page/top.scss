@@ -1,0 +1,43 @@
+@import '../core/mixins/*';
+@import '../core/root/_variables';
+.sect_2 {
+    padding: 80px 0 0;
+    @include is-responsive {
+        padding: 56px 0 0;
+    }
+    background-color: $color-sub;
+    .exclamation {
+        margin-bottom: 32px;
+    }
+    &__heading {
+        text-align: center;
+        margin-bottom: 81px;
+        @include is-responsive {
+            margin-bottom: 54px;
+        }
+    }
+    .p-row03 {
+        & a:first-child {
+            img {
+                width: 182.32px;
+            }
+        }
+        & a:nth-child(2) {
+            img {
+                width: 187.21px;
+            }
+        }
+        & a:nth-child(3) {
+            img {
+                width: 197.33px;
+            }
+        }
+    }
+}
+.sect_3 {
+    padding: 184px 0 120px;
+    background-color: $color-sub;
+    @include is-responsive {
+        padding: 92px 0 80px;
+    }
+}

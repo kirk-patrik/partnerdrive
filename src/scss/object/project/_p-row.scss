@@ -1,0 +1,39 @@
+.p-row {
+  &03 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include is-responsive {
+      flex-wrap: wrap;
+    }
+    &__col {
+      flex: 1 1 calc(100% / 3);
+      max-width: calc(100% / 3);
+      background-color: #fff;
+      height: 443px;
+      padding: 47px 24px 60px;
+      box-shadow: 0px 0px 24px #0000000f;
+      @include is-responsive {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 0 0 76px;
+        height: auto;
+        padding: 24px 24px 36px;
+      }
+      &:first-child {
+        box-shadow: 0px 0px 24px #ea422d3b;
+      }
+      &:nth-child(2) {
+        margin: 0 20px;
+        @include is-responsive {
+            margin: 0 0 76px;
+        }
+      }
+      &:last-child {
+         @include is-responsive {
+             margin: 0;
+         }
+      }
+    }
+  }
+}
