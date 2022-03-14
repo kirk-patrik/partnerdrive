@@ -10,7 +10,7 @@
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-out;
-  box-shadow: 15px 15px 30px #0000002c;
+  font-weight: 700;
   &:after {
     content: "";
     position: absolute;
@@ -33,6 +33,7 @@
   }
   &--return {
     &:after {
+      content: unset;
       border: unset;
       right: unset;
       border-bottom: 2px solid #fff;
@@ -68,22 +69,23 @@
   }
   &--l {
     @include is-responsive {
-      height: 45px;
+      height: 80px;
       @include font-line(16, 16);
     }
     @include is-laptop {
-      height: 56px;
+      height: 80px;
       @include font-line(16, 16);
     }
   }
   &--m {
     @include is-responsive {
       height: 45px;
-      @include font-line(16, 16);
+      @include font-line(14, 14);
     }
     @include is-laptop {
-      height: 50px;
-      @include font-line(20, 20);
+      height: 40px;
+      width: 200px;
+      @include font-line(14, 14);
     }
   }
   &--s {
@@ -114,9 +116,10 @@
   }
   //color
   &--main {
-    background-color: $color-main;
-    border-color: $color-main;
-    color: #fff;
+    background-color: #fff;
+    border-color: #fff;
+    color: #352A2A;
+    border-radius: 40px;
     &:not(#{$main}--nohover):hover {
       background-color: #fff;
       border-color: $color-main;
@@ -178,28 +181,21 @@
     background-color: $color-accent;
     border-color: $color-accent;
     color: #fff;
+    border-radius: 24px;
     &:not(#{$main}--nohover):hover {
-      background-color: #fff;
-      border-color: $color-accent;
-      color: $color-accent;
-      &:after {
-        border-color: $color-accent !important;
-      }
+      opacity: 0.6;
     }
     &--w {
       background-color: #fff;
       border-color: $color-accent;
-      color: $color-accent;
+      color: #352A2A;
+      border-radius: 24px;
+      border-width: 2px;
       &:after {
         border-color: $color-accent;
       }
       &:not(#{$main}--nohover):hover {
-        background-color: $color-accent;
-        border-color: $color-accent;
-        color: #fff;
-        &:after {
-          border-color: #fff !important;
-        }
+        opacity: 0.6;
       }
     }
   }

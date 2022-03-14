@@ -13,6 +13,7 @@
       height: 443px;
       padding: 47px 24px 60px;
       box-shadow: 0px 0px 24px #0000000f;
+      transition: 1s ease;
       @include is-responsive {
         flex: 1 1 100%;
         max-width: 100%;
@@ -20,7 +21,7 @@
         height: auto;
         padding: 24px 24px 36px;
       }
-      &:first-child {
+      &:hover{
         box-shadow: 0px 0px 24px #ea422d3b;
       }
       &:nth-child(2) {

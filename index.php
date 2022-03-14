@@ -1,6 +1,6 @@
 <?php
 require('app/functions.php');
-includeWithVariables('includes/header.php', ['pageTitle' => 'index', 'headCSS' => ['page/top.css']]) ?>
+includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'headCSS' => ['page/top.css']]) ?>
 <section class="sect_2" id="sect_2">
     <div class="l-wrap">
         <div class="sect_2__heading">

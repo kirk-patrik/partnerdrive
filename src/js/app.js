@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // start here
+    scrollClass(document.querySelector('.l-header'));
+
     let issue__link = document.querySelectorAll('.issue__link');
     issue__link.forEach((item) => {
         item.addEventListener("click", (e) => {
@@ -8,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: "smooth",
             });
         });
+    });
+
+    // sp hamburger menu
+    let spHamburger = document.getElementById('hamburgerMenu');
+    let spMenuItem = document.querySelector('.spMenuItem');
+    spHamburger.addEventListener('click', () => {
+        spHamburger.classList.toggle('isActive');
+        spMenuItem.classList.toggle('show');
     });
 
     /**
