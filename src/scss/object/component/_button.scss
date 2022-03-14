@@ -120,6 +120,7 @@
     border-color: #fff;
     color: #352A2A;
     border-radius: 40px;
+    box-shadow: 0px 0px 11px #00000029;
     &:not(#{$main}--nohover):hover {
       background-color: #fff;
       border-color: $color-main;

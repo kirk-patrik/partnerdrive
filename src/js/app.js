@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     // start here
     scrollClass(document.querySelector('.l-header'));
-
+    document.getElementById('scrollTop').addEventListener('click', e => {
+        e.preventDefault();
+        scrollToTop();
+    });
     let issue__link = document.querySelectorAll('.issue__link');
     issue__link.forEach((item) => {
         item.addEventListener("click", (e) => {

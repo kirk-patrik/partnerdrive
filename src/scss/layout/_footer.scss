@@ -1,9 +1,127 @@
 .l-footer {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0 0 30px 0;
-
-    &--addons {
-        padding: 30px 0;
+  min-height: 222px;
+  background-color: #4e3e3e;
+  padding: 71px 140px 30px;
+  position: relative;
+  @include is-responsive {
+    padding: 84px 0 32px;
+    &__branding {
+      width: 197.89px;
+      margin-bottom: 48px;
     }
+  }
+  .scrollToTop {
+    @include font-line(14);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-family: $font-family-en;
+    color: #fff;
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #4e3e3e;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    &::after {
+      content: "";
+      width: 16.41px;
+      height: 16.41px;
+      background: url(../tiny/icon/arrow-top.svg) no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 20px;
+    }
+  }
+  &::before {
+    border: 1px solid #4e3e3e;
+    border-radius: 50%;
+    content: "";
+    height: 92px;
+    left: 50%;
+    position: absolute;
+    top: -40px;
+    transform: translateX(-50%);
+    width: 92px;
+  }
+  &__row {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @include is-responsive {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .copyright {
+      font-family: $font-family-en;
+      @include font-line(11);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #9f9f9f;
+      margin-top: 57px;
+      @include is-responsive {
+        text-align: center;
+        margin-top: 33px;
+      }
+    }
+  }
+  &__menu01,
+  &__menu02 {
+    display: flex;
+    a {
+      letter-spacing: 0.1em;
+      color: #fff;
+      font-family: $font-family-en;
+      font-weight: 600;
+      @include font-line(14, 14);
+      span {
+        font-family: $font-family-base;
+        font-weight: 700;
+      }
+    }
+  }
+  &__menu01 {
+    @include is-responsive {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 54px;
+    }
+    & li:first-child {
+      margin-right: 40px;
+      @include is-responsive {
+        margin: 0 0 18px;
+      }
+    }
+  }
+  &__menu02 {
+    justify-content: flex-end;
+    @include is-responsive {
+        justify-content: center;
+    }
+    & li:first-child {
+      margin-right: 53px;
+      @include is-responsive {
+        margin-right: 27px;
+      }
+    }
+    a {
+      color: #9f9f9f;
+      @include font-line(11);
+      img {
+        margin-bottom: 2px;
+      }
+    }
+  }
 }

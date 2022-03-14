@@ -23,6 +23,8 @@
     position: relative;
     padding: 0 40px;
     height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     @include is-max(1010px) {
       padding: 0 25px;
     }
@@ -48,7 +50,7 @@
       @include font-line(14, 14);
       letter-spacing: 0.05em;
       font-weight: 600;
-      font-family: Poppins;
+      font-family: $font-family-en;
       margin-right: 32px;
       @include is-max(1170px) {
         margin-right: 18px;
@@ -148,7 +150,7 @@
     ul {
       li {
         margin-top: 32px;
-        font-family: Poppins;
+        font-family: $font-family-en;
         @include font-line(16, 16);
         font-weight: 600;
         letter-spacing: 0.05em;
