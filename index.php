@@ -105,7 +105,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                     <div class="p-content01__row" id="<?= $loop02['id']; ?>">
                         <div class="p-content01__col">
                             <p class="p-content01__ttl"><?= $loop02['ttl']; ?></p>
-                            <p class="p-content01__sub">pertner driveで解決！</p>
+                            <p class="p-content01__sub"><span>pertner drive</span>で解決！</p>
                             <img src="<?= resource('img', 'raw/') . $loop02['frame']; ?>" alt="">
                         </div>
                         <div class="p-content01__col">
