@@ -68,7 +68,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
     <div class="l-wrap">
         <?php
         $loopContent02 = [
-            [   
+            [
                 "id" => "issue01",
                 "ttl" => "<span>商材調達</span>の課題も",
                 "frame" => "sect_3-img01.png",
@@ -78,7 +78,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                     "txt03" => " 研修や契約など稼働開始までに必要なリードタイムを<span>システムで一元サポートする</span>ことで短縮。",
                 ],
             ],
-            [   
+            [
                 "id" => "issue02",
                 "ttl" => "<span>商材調達</span>の課題も",
                 "frame" => "sect_3-img02.png",
@@ -121,6 +121,59 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                     </div>
                 <?php endforeach; ?>
             </div>
+        </div>
+    </div>
+</section>
+<section class="faq" id="faq">
+    <div class="l-wrap">
+        <p class="u-f-ta-c c-heading01__main">よくある質問<span>Q&A</span></p>
+        <?php
+        $faqValue = [
+            [
+                'title' => 'どのような支払い方法がありますか？',
+                'content' => 'お支払い方法にクレジットカードまたは後払いをご利用いただけます。<br>
+            詳しくはこちらをご確認ください。'
+            ],
+            [
+                'title' => '利用料金は表示料金×人数ですか？',
+                'content' => 'お支払い方法にクレジットカードまたは後払いをご利用いただけます。<br>
+            詳しくはこちらをご確認ください。'
+            ],
+            [
+                'title' => '利用前に見学（ロケハン）できますか？',
+                'content' => 'お支払い方法にクレジットカードまたは後払いをご利用いただけます。<br>
+            詳しくはこちらをご確認ください。'
+            ],
+            [
+                'title' => '利用時間の延長は可能ですか？',
+                'content' => 'お支払い方法にクレジットカードまたは後払いをご利用いただけます。<br>
+            詳しくはこちらをご確認ください。'
+            ],
+            [
+                'title' => '法人利用・領収書・請求書発行を法人名義にできますか？',
+                'content' => 'お支払い方法にクレジットカードまたは後払いをご利用いただけます。<br>
+            詳しくはこちらをご確認ください。'
+            ],
+            [
+                'title' => '予約した内容はどこで確認できますか？',
+                'content' => 'お支払い方法にクレジットカードまたは後払いをご利用いただけます。<br>
+            詳しくはこちらをご確認ください。'
+            ],
+        ];
+        ?>
+        <div class="p-accordion">
+            <?php foreach ($faqValue as $i => $faq) : ?>
+                <div class="p-accordion__item <?= $i == '0' ? 'isActive' : '' ?>">
+                    <div class="p-accordion__header">
+                        <p>Q</p>
+                        <p><?= $faq['title']; ?></p>
+                    </div>
+                    <div class="p-accordion__body">
+                        <p>A</p>
+                        <p><?= $faq['content']; ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

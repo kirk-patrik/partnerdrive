@@ -1,12 +1,38 @@
 .c-heading {
   &01 {
-    &__main { 
+    &__main {
+      @include font-line(35, 51);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: $color-accent;
+      position: relative;
+      @include is-responsive {
+        @include font-line(21, 31);
+        font-family: $font-family-en;
+        font-weight: 600;
+      }
+      span {
+        @include font-line(121, 100);
+        letter-spacing: 0;
+        font-weight: 600;
+        font-family: $font-family-en;
+        color: #352a2a;
+        opacity: 0.04;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -70px;
+        @include is-responsive {
+          @include font-line(76, 62);
+          top: -42px;
+        }
+      }
     }
     &__sub {
     }
   }
   &02 {
-    &__main { 
+    &__main {
     }
     &__sub {
       @include font-line(24, 36);

@@ -41,3 +41,11 @@
         padding: 92px 0 80px;
     }
 }
+.faq {
+    padding: 185px 0 119px;
+    max-width: 900px;
+    margin: 0 auto;
+    @include is-responsive {
+        padding: 121px 0 76px;
+    }
+}

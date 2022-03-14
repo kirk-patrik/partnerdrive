@@ -1,0 +1,124 @@
+.p-accordion {
+    padding: 81px 0 0;
+    @include is-responsive {
+        padding-top: 66px;
+    }
+  $main: &;
+  &__item {
+    margin-bottom: 32px;
+    background-color: #FAFAFA;
+    border: 1px solid #D0D0D0;
+    border-radius: 0;
+    cursor: pointer;
+    padding: 0 25px;
+    @include is-responsive {
+        padding: 0 16px;
+        margin-bottom: 16px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.isActive {
+        padding-bottom: 24px;
+        border: 1px solid $color-accent;
+      #{$main}__header {
+        border-bottom: 1px solid #d0d0d0; border-bottom: 1px solid #d0d0d0;
+        &::after {
+          transform: rotate(0);
+        }
+      }
+    }
+    #{$main}__header {
+      position: relative;
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      @include is-responsive {
+        min-height: 0;
+        align-items: flex-start;
+        padding: 22px 0;
+      }
+      &::before,  &::after {
+        content: "";
+        width: 16PX;
+        background-color: $color-accent;
+        height: 2px;
+        position: absolute;
+        right: 20px;
+        @include is-responsive {
+            right: 0;
+        }
+        @include is-sp {
+            top: 37%;
+        }
+      }
+      &::after {
+        transform: rotate(90deg);
+      }
+      & p:first-child {
+        width: 32px;
+        height: 32px;
+        background-color: #4e3e3e;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-line(15);
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        font-family: $font-family-en;
+      }
+      & p:last-child {
+        padding-left: 16px;
+        @include font-line(16);
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        width: calc(100% - 32px);
+        @include is-responsive {
+            padding-left: 8px;
+            @include font-line(14, 24);
+        }
+        @include is-sp {
+            padding-right: 25px;
+        }
+      }
+    }
+    #{$main}__body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 400ms cubic-bezier(0.3, 0, 0, 1) 0s;
+      display: flex;
+      & p:first-child {
+        width: 32px;
+        height: 32px;
+        background-color: $color-accent;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-line(15);
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        font-family: $font-family-en;
+        margin-top: 29px;
+      }
+      & p:last-child {
+        padding-left: 16px;
+        @include font-line(15);
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        padding: 29px 0 0 16px;
+        width: calc(100% - 32px);
+        @include is-responsive {
+            padding: 29px 0 0 8px;
+            @include font-line(14, 24);
+        }
+        @include is-sp {
+            padding-right: 21px;
+        }
+      }
+    }
+  }
+}

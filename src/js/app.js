@@ -23,6 +23,31 @@ document.addEventListener("DOMContentLoaded", function () {
         spMenuItem.classList.toggle('show');
     });
 
+    // faq 
+    let accordionItem = document.querySelectorAll('.p-accordion > .p-accordion__item');
+    if (accordionItem.length > 0) {
+        accordionItem[0].children[1].style.maxHeight = accordionItem[0].children[1].scrollHeight + "px";
+        accordionItem.forEach(item => {
+            let questionAndAnswer = {
+                question: item.querySelector('.p-accordion__header'),
+                answer: item.querySelector('.p-accordion__body'),
+            }
+            item.addEventListener('click', event => {
+                toggleAccordion(questionAndAnswer);
+            });
+
+            function toggleAccordion({ question, answer } = questionAndAnswer) {
+                if(question.parentNode.classList.contains('isActive')) {
+                    question.parentNode.classList.remove('isActive');
+                    answer.style.maxHeight = "0";
+                } else {
+                    question.parentNode.classList.add('isActive');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            }
+        });
+    }
+
     /**
      * FOR PARTSLIST PAGE
      */
