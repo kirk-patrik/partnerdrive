@@ -194,6 +194,28 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             </div>
             <div class="p-content02__col">
                 <p class="heading">取り扱い商材も様々</p>
+                <ul class="sect_4__slider">
+                    <li>
+                        <img src="<?= resource('img', 'raw/sect_4-img01.png'); ?>" alt="sect_4-img01">
+                        <p>経理ソリューション</p>
+                        <p>株式会社ミシシッピソリューション</p>
+                    </li>
+                    <li>
+                        <img src="<?= resource('img', 'raw/sect_4-img02.png'); ?>" alt="sect_4-img01">
+                        <p>運輸テクノロジー</p>
+                        <p>株式会社ラプラタテクノロジー</p>
+                    </li>
+                    <li>
+                        <img src="<?= resource('img', 'raw/sect_4-img03.png'); ?>" alt="sect_4-img01">
+                        <p>在庫管理システム</p>
+                        <p>株式会社ニジェールロジスティクス</p>
+                    </li>
+                    <li>
+                        <img src="<?= resource('img', 'raw/sect_4-img04.png'); ?>" alt="sect_4-img01">
+                        <p>太陽光パネル</p>
+                        <p>株式会社リカオレネクキャスト</p>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

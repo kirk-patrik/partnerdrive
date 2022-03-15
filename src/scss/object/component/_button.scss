@@ -56,6 +56,9 @@
     width: 467px;
     margin: 48px auto 0;
     height: 88px;
+    @include is-responsive {
+      height: 80px;
+    }
   }
   &--xl {
     @include is-responsive {
@@ -216,6 +219,9 @@
       @include font-line(25, 25);
       letter-spacing: 0.1em;
       box-shadow: 0px 0px 12px #0000003b;
+      @include is-responsive {
+        @include font-line(18, 18);
+      }
       &:not(#{$main}--nohover):hover {
         background-color: $color-accent;
         color: #fff;

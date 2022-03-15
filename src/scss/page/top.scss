@@ -12,8 +12,8 @@
     text-align: center;
     padding-bottom: 65px;
     @include is-responsive {
-        @include font-line(20, 33);
-        letter-spacing: .12em;
+      @include font-line(20, 33);
+      letter-spacing: 0.12em;
     }
     span {
       color: $color-accent;
@@ -26,29 +26,29 @@
     margin: 63px auto 0;
     position: relative;
     &::before {
-        content: "";
-        width: 90%;
-        height: 10px;
-        background-color: $color-accent;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        z-index: -1;
+      content: "";
+      width: 90%;
+      height: 10px;
+      background-color: $color-accent;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: -1;
     }
     p {
-        @include font-line(14, 18);
-        letter-spacing: .1em;
-        font-weight: 700;
-        color: #fff;
-        width: 81px;
-        height: 83px;
-        background-color: $color-accent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        text-align: center;
+      @include font-line(14, 18);
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #fff;
+      width: 81px;
+      height: 83px;
+      background-color: $color-accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-align: center;
     }
   }
   &-img01 {
@@ -56,13 +56,19 @@
     margin: 0 auto;
     display: inherit;
     @include is-responsive {
-        max-width: 325px;
+      max-width: 325px;
+    }
+    @include is-max(375px) {
+      max-width: 100%;
     }
   }
   &-img02 {
     max-width: 320px;
     margin: 48px auto 0;
     display: inherit;
+    @include is-max(375px) {
+      max-width: 100%;
+    }
   }
 }
 .sect_2 {
@@ -100,7 +106,7 @@
   }
 }
 .sect_3 {
-    padding: 181px 0 231px;
+  padding: 181px 0 231px;
   background-color: $color-sub;
   @include is-responsive {
     padding: 92px 0 80px;
@@ -114,6 +120,41 @@
     }
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+.sect_4 {
+  &__slider {
+    margin-top: 84px;
+    margin-left: -34px;
+    li {
+      background: #fff;
+      padding: 8px;
+      img {
+        width: 100%;
+      }
+      p {
+        font-family: roboto;
+        letter-spacing: 0.05em;
+        text-align: left;
+      }
+      p:nth-child(2) {
+        @include font-line(14, 21);
+        font-weight: 700;
+        padding: 11px 0 7px;
+      }
+      p:last-child {
+        @include font-line(12, 24);
+        font-weight: 500;
+        color: #707070;
+        text-align: left;
+      }
+    }
+    .slick-slide {
+      margin: 0 8px !important;
+      @include is-laptop {
+        width: 160px !important;
+      }
     }
   }
 }

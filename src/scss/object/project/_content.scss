@@ -119,6 +119,9 @@
       margin: 0 auto;
       position: relative;
       justify-content: flex-end;
+      @include is-responsive {
+        flex-direction: column;
+      }
     }
     &__col {
       &:first-child {
@@ -129,14 +132,33 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        top: -123px;
+        top: -101px;
         position: absolute;
         left: 0;
+        z-index: 3;
+        @include is-max(1100px) {
+          width: 589px;
+        }
+        @include is-responsive {
+          position: static;
+          width: 100%;
+          padding: 0 16px;
+          height: 359px;
+          a {
+            @include is-max(500px) {
+              width: 100%;
+              margin-top: 41px;
+            }
+          }
+        }
         .heading {
           @include font-line(35, 64);
           letter-spacing: 0.1em;
           font-weight: 700;
           color: #fff;
+          @include is-responsive {
+            @include font-line(24, 43);
+          }
           span {
             font-family: $font-family-en;
             font-weight: 600;
@@ -145,16 +167,29 @@
       }
       &:last-child {
         width: 640px;
-        background: #E8E8E8;
+        background: #e8e8e8;
         height: 510px;
         text-align: center;
+        overflow: hidden;
+        @include is-max(1100px) {
+          width: 582px;
+        }
+        @include is-responsive {
+          width: 100%;
+          height: auto;
+          padding-bottom: 84px;
+        }
         .heading {
           display: inline-block;
           padding-top: 92px;
           @include font-line(20, 20);
           font-weight: 700;
-          letter-spacing: .15em;
+          letter-spacing: 0.15em;
           position: relative;
+          overflow: visible;
+          @include is-responsive {
+            padding-top: 80px;
+          }
           &::after {
             content: "";
             background: url(../tiny/icon/heading-after.svg) no-repeat;

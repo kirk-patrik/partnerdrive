@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             function toggleAccordion({ question, answer } = questionAndAnswer) {
-                if(question.parentNode.classList.contains('isActive')) {
+                if (question.parentNode.classList.contains('isActive')) {
                     question.parentNode.classList.remove('isActive');
                     answer.style.maxHeight = "0";
                 } else {
@@ -47,6 +47,30 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    $('.sect_4__slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3.4,
+        slidesToScroll: 1,
+        arrows: false,
+        swipe: false,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1.7,
+                    slidesToScroll: 1,
+                    centerMode: true
+                }
+            },
+        ]
+    });
+
+
 
     /**
      * FOR PARTSLIST PAGE
