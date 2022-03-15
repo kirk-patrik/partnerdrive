@@ -1,6 +1,32 @@
 <?php
 require('app/functions.php');
 includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'headCSS' => ['page/top.css']]) ?>
+<section class="p-mv">
+    <img class="bg__monitor u-d-n-responsive" src="<?= resource('img', 'raw/mv-monitor.png'); ?>" alt="">
+    <img class="bg__monitor-sp u-d-n-laptop" src="<?= resource('img', 'raw/mv-monitor-sp.png'); ?>" alt="">
+    <div class="l-wrap p-mv__container">
+        <div class="p-mv__content">
+            <div class="row">
+                <div class="col">
+                    <div class="welcome">
+                        <p class="c-heading01__main c-heading01__main--left c-heading01__main--big">次に売る商材が、<span>sales partner</span></p>
+                        <p class="p-mv__txt01"><span>速攻</span><span>で見つかる。</span></p>
+                        <p class="p-mv__txt02">
+                            <span>partner drive</span>は<br>
+                            売りたい人(サプライ・パートナー)と<br>
+                            売れる人(セールス・パートナー)をつなげ、<br>
+                            <span class="accent">最適化するクラウドサービス</span>です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-mv__scroll">
+            <span></span>
+            <p>scroll</p>
+        </div>
+    </div>
+</section>
 <section class="sect_2" id="sect_2">
     <div class="l-wrap">
         <div class="sect_2__heading">
@@ -264,11 +290,11 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <div class="p-form__container">
                 <label>お問い合わせ内容<span class="required">*</span></label>
                 <div class="p-form__group">
-                   <select name="" id="">
-                       <option selected value="">選択してください</option>
-                       <option value="">sample 1</option>
-                       <option value="">sample 2</option>
-                   </select>
+                    <select name="" id="">
+                        <option selected value="">選択してください</option>
+                        <option value="">sample 1</option>
+                        <option value="">sample 2</option>
+                    </select>
                 </div>
             </div>
             <div class="p-form__container">

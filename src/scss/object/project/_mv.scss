@@ -1,0 +1,181 @@
+.p-mv {
+  width: 100%;
+  height: 100vh;
+  background: transparent linear-gradient(234deg, #fff9fa 0%, #eaeaea 100%) 0%
+    0% no-repeat padding-box;
+  position: relative;
+  overflow: hidden;
+  @include is-responsive {
+    height: 812px;
+    &__container {
+      max-width: unset !important;
+    }
+  }
+  &::after {
+    background-color: #fff;
+    content: "";
+    height: 875px;
+    width: 100%;
+    position: absolute;
+    bottom: -72%;
+    left: 0;
+    transform: skewY(-22deg);
+    @include is-min(1700px) {
+      transform: skewY(-13deg);
+      height: 908px;
+    }
+    @include is-max(1600px) {
+        transform: skewY(-14deg);
+        bottom: -94%;
+    }
+    @include is-max(1500px) {
+        transform: skewY(-22deg);
+        bottom: -72%;
+    }
+    @include is-responsive {
+      bottom: -85%;
+      height: 744px;
+      transform: skewY(-15deg);
+    }
+  }
+  &__content {
+    padding-top: 193px;
+    @include is-responsive {
+      padding-top: 135px;
+    }
+    .welcome {
+      padding-left: 50px;
+      @include is-responsive {
+        padding-left: 0;
+      }
+      .p-mv__txt01 {
+        @include font-line(61, 99);
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: #352a2a;
+        @include is-responsive {
+          @include font-line(35, 62);
+          margin-left: 20px;
+        }
+        & span:first-child {
+          color: #fff;
+          position: relative;
+          display: inline-block;
+          z-index: 2;
+          &::after {
+            content: "";
+            background-color: $color-accent;
+            height: 70%;
+            left: -25px;
+            mix-blend-mode: overlay;
+            position: absolute;
+            top: 50%;
+            width: 156.38px;
+            z-index: 1;
+            transform: skewX(-20deg) translateY(-45%);
+            @include is-responsive {
+              left: -20px;
+              width: 98.38px;
+            }
+          }
+        }
+        & span:last-child {
+          position: relative;
+          z-index: 2;
+        }
+      }
+      .p-mv__txt02 {
+        @include font-line(15, 28);
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        padding-top: 66px;
+        position: relative;
+        z-index: 7;
+        @include is-responsive {
+          padding-top: 36px;
+          @include font-line(14, 26);
+        }
+        & span:first-child {
+          font-weight: 500;
+          font-family: $font-family-en;
+        }
+        .accent {
+          color: $color-accent;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .bg__monitor {
+    position: absolute;
+    right: -13.8%;
+    top: 30%;
+    z-index: 2;
+    width: 823px;
+    @include is-min(1700px) {
+      right: 34px;
+    }
+    @include is-max(1200px) {
+      top: 46%;
+    }
+  }
+  .bg__monitor-sp {
+    position: absolute;
+    right: 0;
+    top: unset;
+    bottom: 20%;
+    z-index: 2;
+    width: 473px;
+    @include is-sp {
+      bottom: 3%;
+    }
+    @include is-max(440px) {
+      transform: scale(1.2);
+      bottom: 4%;
+    }
+    @include is-max(376px) {
+      transform: scale(1.3);
+      right: -69px;
+      bottom: 6%;
+    }
+  }
+  &__scroll {
+    position: absolute;
+    left: 64px;
+    bottom: -140px;
+    display: inline-block;
+    z-index: 7;
+    @include is-responsive {
+      left: 16px;
+      z-index: 7;
+      bottom: -376px;
+    }
+    span {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid $color-accent;
+      display: inline-block;
+      position: relative;
+      &::after {
+        content: "";
+        width: 10.41px;
+        height: 10.41px;
+        border: 2px solid $color-accent;
+        border-top-width: none;
+        border-right-width: none;
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    p {
+      @include font-line(12, 12);
+      letter-spacing: 0;
+      font-weight: 500;
+      font-family: $font-family-en;
+      padding-top: 3px;
+    }
+  }
+}
