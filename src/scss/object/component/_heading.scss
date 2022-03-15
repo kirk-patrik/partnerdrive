@@ -27,6 +27,13 @@
           top: -42px;
         }
       }
+      &--left {
+        span {
+          transform: unset;
+          display: inline-block;
+          left: 0;
+        }
+      }
     }
     &__sub {
     }

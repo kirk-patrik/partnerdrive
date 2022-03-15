@@ -60,22 +60,21 @@
   }
   &--xl {
     @include is-responsive {
-      height: 70px;
+      height: 80px;
+      @include font-line(16, 16);
     }
     @include is-laptop {
       height: 80px;
-      @include font-line(20, 20);
+      @include font-line(16, 16);
     }
   }
   &--l {
-    @include is-responsive {
-      height: 80px;
-      @include font-line(16, 16);
-    }
-    @include is-laptop {
-      height: 80px;
-      @include font-line(16, 16);
-    }
+    height: 56px;
+    width: 240px;
+    @include font-line(15, 15);
+    border-radius: 39px !important;
+    letter-spacing: .1em;
+    font-weight: 500;
   }
   &--m {
     @include is-responsive {
@@ -108,9 +107,9 @@
     &:hover {
       background-color: #fff;
       border: 1px solid #4e3e3e;
-      color: #352A2A;
+      color: #352a2a;
       &::after {
-        border-color: #352A2A;
+        border-color: #352a2a;
       }
     }
   }
@@ -118,7 +117,7 @@
   &--main {
     background-color: #fff;
     border-color: #fff;
-    color: #352A2A;
+    color: #352a2a;
     border-radius: 40px;
     box-shadow: 0px 0px 11px #00000029;
     &:not(#{$main}--nohover):hover {
@@ -189,7 +188,7 @@
     &--w {
       background-color: #fff;
       border-color: $color-accent;
-      color: #352A2A;
+      color: #352a2a;
       border-radius: 24px;
       border-width: 2px;
       &:after {

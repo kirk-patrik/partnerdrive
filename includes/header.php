@@ -59,8 +59,8 @@
                 <li><a href="#">お知らせ</a></li>
             </ul>
             <div class="spMenuItem__buttons">
-            <a class="c-button c-button--l c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_download.svg'); ?>" alt=""> 資料ダウンロード</a>
-            <a class="c-button c-button--l c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_user-sp.svg'); ?>" alt=""> 新規登録・ログイン</a>
+            <a class="c-button c-button--xl c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_download.svg'); ?>" alt=""> 資料ダウンロード</a>
+            <a class="c-button c-button--xl c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_user-sp.svg'); ?>" alt=""> 新規登録・ログイン</a>
             </div>
         </div>
         <!-- header end here -->

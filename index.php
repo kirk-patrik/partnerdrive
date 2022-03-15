@@ -124,6 +124,44 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
+<section class="sect_7" id="sect_7">
+    <div class="l-wrap">
+        <div class="news__row u-natural__width">
+            <div class="news__col">
+                <p class="c-heading01__main c-heading01__main--left">お知らせ<span>news</span></p>
+                <a href="#" class="c-button c-button--accent c-button--l u-d-n-responsive">お知らせ一覧を見る</a>
+            </div>
+            <div class="news__col">
+                <div class="news__list">
+                    <div class="news__listItem">
+                        <div class="heading">
+                            <a href="#">2022.02.01</a><a href="#">お知らせ</a>
+                        </div>
+                        <a href="#" class="body">
+                        お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります。
+                        </a>
+                    </div>
+                    <div class="news__listItem">
+                        <div class="heading">
+                            <a href="#">2022.02.01</a><a href="#">お知らせ</a>
+                        </div>
+                        <a href="#" class="body">
+                        お知らせが入りますお知らせが入りますお知らせが入ります。
+                        </a>
+                    </div>
+                    <div class="news__listItem">
+                        <div class="heading">
+                            <a href="#">2022.02.01</a><a href="#">お知らせ</a>
+                        </div>
+                        <a href="#" class="body">
+                        お知らせが入りますお知らせが入りますお知らせが入ります。
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="faq" id="faq">
     <div class="l-wrap">
         <p class="u-f-ta-c c-heading01__main">よくある質問<span>Q&A</span></p>
@@ -177,5 +215,6 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
+
 <?php
 includeWithVariables('includes/footer.php', ['footerJS' => ['all.js']]) ?>
