@@ -2,15 +2,67 @@
 @import "../core/root/_variables";
 .sect_1 {
   padding-bottom: 160px;
+  @include is-responsive {
+    padding: 50px 0 80px;
+  }
   &__heading {
     @include font-line(24, 41);
     letter-spacing: 0.1em;
     font-weight: 700;
     text-align: center;
     padding-bottom: 65px;
+    @include is-responsive {
+        @include font-line(20, 33);
+        letter-spacing: .12em;
+    }
     span {
       color: $color-accent;
     }
+  }
+  &__content--features {
+    display: flex;
+    max-width: 725px;
+    justify-content: space-between;
+    margin: 63px auto 0;
+    position: relative;
+    &::before {
+        content: "";
+        width: 90%;
+        height: 10px;
+        background-color: $color-accent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: -1;
+    }
+    p {
+        @include font-line(14, 18);
+        letter-spacing: .1em;
+        font-weight: 700;
+        color: #fff;
+        width: 81px;
+        height: 83px;
+        background-color: $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-align: center;
+    }
+  }
+  &-img01 {
+    max-width: 616px;
+    margin: 0 auto;
+    display: inherit;
+    @include is-responsive {
+        max-width: 325px;
+    }
+  }
+  &-img02 {
+    max-width: 320px;
+    margin: 48px auto 0;
+    display: inherit;
   }
 }
 .sect_2 {

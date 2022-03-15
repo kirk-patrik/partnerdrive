@@ -30,9 +30,30 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 <section class="sect_1" id="sect_1">
     <div class="l-wrap">
         <p class="sect_1__heading">
-            供給と需要を<span>自動的</span>かつ<span>リアルタイム</span>に最適にマッチさせることで、<br>
-            パートナー販売チャネルの<span>売上を最大化</span>します。
+            供給と需要を<span>自動的</span>かつ<span><br class="u-d-n-laptop">リアルタイム</span>に最適に<br class="u-d-n-laptop">マッチさせることで、<br>
+            パートナー販売チャネルの<br class="u-d-n-laptop"><span>売上を最大化</span>します。
         </p>
+        <div class="sect_1__content">
+            <img src="<?= resource('img', 'raw/sect_1-img01.png'); ?>" alt="sect1 image01" class="sect_1-img01 u-d-n-responsive">
+            <img src="<?= resource('img', 'raw/sect_1-img01-sp.png'); ?>" alt="sect1 image01" class="sect_1-img01 u-d-n-laptop">
+            <img src="<?= resource('img', 'raw/sect_1-img02-sp.png'); ?>" alt="sect1 image02" class="sect_1-img02 u-d-n-laptop">
+            <div class="sect_1__content--features u-d-n-responsive">
+                <p>教育</p>
+                <p>
+                    債権<br>
+                    管理
+                </p>
+                <p>分析<br>
+                    レポート</p>
+                <p>案件<br>
+                    管理</p>
+                <p>チャット</p>
+                <p>報酬<br>
+                    管理</p>
+                <p>条件<br>
+                    交渉</p>
+            </div>
+        </div>
     </div>
 </section>
 <section class="sect_2" id="sect_2">

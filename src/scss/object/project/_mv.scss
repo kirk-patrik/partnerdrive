@@ -33,9 +33,12 @@
       bottom: -72%;
     }
     @include is-responsive {
-      bottom: -85%;
+      bottom: -76%;
       height: 744px;
       transform: skewY(-15deg);
+    }
+    @include is-max(500px) {
+      bottom: -85%;
     }
   }
   &__content {
