@@ -138,7 +138,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                             <a href="#">2022.02.01</a><a href="#">お知らせ</a>
                         </div>
                         <a href="#" class="body">
-                        お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります。
+                            お知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入りますお知らせが入ります。
                         </a>
                     </div>
                     <div class="news__listItem">
@@ -146,7 +146,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                             <a href="#">2022.02.01</a><a href="#">お知らせ</a>
                         </div>
                         <a href="#" class="body">
-                        お知らせが入りますお知らせが入りますお知らせが入ります。
+                            お知らせが入りますお知らせが入りますお知らせが入ります。
                         </a>
                     </div>
                     <div class="news__listItem">
@@ -154,7 +154,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                             <a href="#">2022.02.01</a><a href="#">お知らせ</a>
                         </div>
                         <a href="#" class="body">
-                        お知らせが入りますお知らせが入りますお知らせが入ります。
+                            お知らせが入りますお知らせが入りますお知らせが入ります。
                         </a>
                     </div>
                 </div>
@@ -215,6 +215,16 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
+<section class="get__started" id="get__started">
+    <div class="l-wrap">
+        <p class="get__started_heading">さっそく<span>partner drive</span><br class="u-d-n-laptop">を使ってみましょう。</p>
+        <div class="get__started_buttons">
+            <a class="c-button c-button--xl c-button--accent--w c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_download.svg'); ?>" alt=""> 資料ダウンロード</a>
+            <a class="c-button c-button--xl c-button--accent c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_user.svg'); ?>" alt=""> 新規登録・ログイン</a>
+        </div>
+    </div>
+</section>
+
 
 <?php
 includeWithVariables('includes/footer.php', ['footerJS' => ['all.js']]) ?>
