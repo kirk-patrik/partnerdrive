@@ -182,6 +182,22 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
+<section class="sect_4" id="sect_4">
+    <div class="p-content02">
+        <div class="p-content02__row">
+            <div class="p-content02__col">
+                <p class="heading">
+                    さっそく</span>partner drive<span>を<br>
+                    使ってみましょう
+                </p>
+                <a class="c-button c-button--xxl c-button--accent--d c-button--return" href="#"><span>partner drive</span>をはじめる</a>
+            </div>
+            <div class="p-content02__col">
+                <p class="heading">取り扱い商材も様々</p>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="sect_7" id="sect_7">
     <div class="l-wrap">
         <div class="news__row u-natural__width">

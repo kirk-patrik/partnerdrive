@@ -53,10 +53,9 @@
   }
   // size
   &--xxl {
-    @include is-laptop {
-      height: 90;
-      @include font-line(23, 23);
-    }
+    width: 467px;
+    margin: 48px auto 0;
+    height: 88px;
   }
   &--xl {
     @include is-responsive {
@@ -73,7 +72,7 @@
     width: 240px;
     @include font-line(15, 15);
     border-radius: 39px !important;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     font-weight: 500;
     border: 2px solid $color-accent;
     &:hover {
@@ -193,7 +192,7 @@
     border-color: $color-accent;
     color: #fff;
     border-radius: 24px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     &:not(#{$main}--nohover):hover {
       opacity: 0.6;
     }
@@ -208,6 +207,22 @@
       }
       &:not(#{$main}--nohover):hover {
         opacity: 0.6;
+      }
+    }
+    &--d {
+      color: $color-accent;
+      background-color: #fff;
+      border-radius: 44px;
+      @include font-line(25, 25);
+      letter-spacing: 0.1em;
+      box-shadow: 0px 0px 12px #0000003b;
+      &:not(#{$main}--nohover):hover {
+        background-color: $color-accent;
+        color: #fff;
+      }
+      span {
+        font-family: $font-family-en;
+        font-weight: 600;
       }
     }
   }
