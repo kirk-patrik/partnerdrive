@@ -1,5 +1,18 @@
 @import "../core/mixins/*";
 @import "../core/root/_variables";
+.sect_1 {
+  padding-bottom: 160px;
+  &__heading {
+    @include font-line(24, 41);
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 65px;
+    span {
+      color: $color-accent;
+    }
+  }
+}
 .sect_2 {
   padding: 80px 0 0;
   @include is-responsive {
@@ -35,10 +48,21 @@
   }
 }
 .sect_3 {
-  padding: 184px 0 120px;
+  padding: 181px 0 213px;
   background-color: $color-sub;
   @include is-responsive {
     padding: 92px 0 80px;
+  }
+  &--content {
+    padding: 100px 0 0;
+    margin: -100px 0 120px;
+    @include is-responsive {
+      margin: -80px 0 80px;
+      padding: 80px 0 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 .sect_7 {

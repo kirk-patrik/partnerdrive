@@ -27,6 +27,14 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
+<section class="sect_1" id="sect_1">
+    <div class="l-wrap">
+        <p class="sect_1__heading">
+            供給と需要を<span>自動的</span>かつ<span>リアルタイム</span>に最適にマッチさせることで、<br>
+            パートナー販売チャネルの<span>売上を最大化</span>します。
+        </p>
+    </div>
+</section>
 <section class="sect_2" id="sect_2">
     <div class="l-wrap">
         <div class="sect_2__heading">
@@ -128,23 +136,26 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         <div class="p-content01 u-natural__width">
             <div class="p-content01__main">
                 <?php foreach ($loopContent02 as $loop02) : ?>
-                    <div class="p-content01__row" id="<?= $loop02['id']; ?>">
-                        <div class="p-content01__col">
-                            <p class="p-content01__ttl"><?= $loop02['ttl']; ?></p>
-                            <p class="p-content01__sub"><span>pertner drive</span>で解決！</p>
-                            <img src="<?= resource('img', 'raw/') . $loop02['frame']; ?>" alt="">
-                        </div>
-                        <div class="p-content01__col">
-                            <?php foreach ($loop02['content'] as $cont) : ?>
-                                <div class="p-content01__cont">
-                                    <p>
-                                        <?= $cont; ?>
-                                    </p>
-                                    <a href="#" class="c-button c-button--s">機能を見る</a>
-                                </div>
-                            <?php endforeach; ?>
+                    <div class="sect_3--content" id="<?= $loop02['id']; ?>">
+                        <div class="p-content01__row">
+                            <div class="p-content01__col">
+                                <p class="p-content01__ttl"><?= $loop02['ttl']; ?></p>
+                                <p class="p-content01__sub"><span>pertner drive</span>で解決！</p>
+                                <img src="<?= resource('img', 'raw/') . $loop02['frame']; ?>" alt="">
+                            </div>
+                            <div class="p-content01__col">
+                                <?php foreach ($loop02['content'] as $cont) : ?>
+                                    <div class="p-content01__cont">
+                                        <p>
+                                            <?= $cont; ?>
+                                        </p>
+                                        <a href="#" class="c-button c-button--s">機能を見る</a>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
+
                 <?php endforeach; ?>
             </div>
         </div>
