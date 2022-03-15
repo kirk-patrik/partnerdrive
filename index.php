@@ -224,7 +224,65 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
+<section class="p-form">
+    <div class="l-wrap">
+        <p class="u-f-ta-c c-heading01__main">お問い合わせ<span>contact</span></p>
+        <p class="u-f-ta-c c-heading01__sub">以下フォームをご記入の上<br class="u-d-n-laptop">お問い合わせください。</p>
 
+        <div class="p-form__inner u-natural__width">
+            <div class="p-form__container">
+                <label>お名前<span class="required">*</span></label>
+                <div class="p-form__group">
+                    <input type="text" class="p-form__control p-form__control--half" placeholder="姓">
+                    <input type="text" class="p-form__control p-form__control--half" placeholder="名">
+                </div>
+            </div>
+            <div class="p-form__container">
+                <label>会社名<span class="required">*</span></label>
+                <div class="p-form__group">
+                    <input type="text" class="p-form__control" placeholder="会社名をご記入ください">
+                </div>
+            </div>
+            <div class="p-form__container">
+                <label>部署名<span class="required">*</span></label>
+                <div class="p-form__group">
+                    <input type="text" class="p-form__control" placeholder="部署名をご記入ください">
+                </div>
+            </div>
+            <div class="p-form__container">
+                <label>Eメール<span class="required">*</span></label>
+                <div class="p-form__group">
+                    <input type="email" class="p-form__control" placeholder="xxxx@partnerdrive.com">
+                </div>
+            </div>
+            <div class="p-form__container">
+                <label>電話番号<span class="required">*</span></label>
+                <div class="p-form__group">
+                    <input type="text" class="p-form__control" placeholder="080-0000-0000">
+                </div>
+            </div>
+            <div class="p-form__container">
+                <label>お問い合わせ内容<span class="required">*</span></label>
+                <div class="p-form__group">
+                   <select name="" id="">
+                       <option selected value="">選択してください</option>
+                       <option value="">sample 1</option>
+                       <option value="">sample 2</option>
+                   </select>
+                </div>
+            </div>
+            <div class="p-form__container">
+                <label>ご相談、要望などあればご記入ください</label>
+                <div class="p-form__group">
+                    <textarea name="message" id="message" cols="30" rows="10">ご自由にご記入ください</textarea>
+                </div>
+            </div>
+
+            <p class="u-f-ta-c p-form__policy">お問い合わせには、<br class="u-d-n-laptop"><a href="#">プライバシーポリシー</a>への<br class="u-d-n-laptop">同意が必要です。</p>
+            <a href="#" class="c-button c-button--accent c-button--l u-m-c">同意の上、送信する</a>
+        </div>
+    </div>
+</section>
 
 <?php
 includeWithVariables('includes/footer.php', ['footerJS' => ['all.js']]) ?>

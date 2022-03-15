@@ -36,6 +36,14 @@
       }
     }
     &__sub {
+      @include font-line(18, 26);
+      font-weight: 500;
+      letter-spacing: .1em;
+      padding-top: 93px;
+      @include is-responsive {
+        @include font-line(16, 28);
+        padding-top: 56px;
+      }
     }
   }
   &02 {

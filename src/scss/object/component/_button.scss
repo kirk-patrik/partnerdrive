@@ -75,6 +75,17 @@
     border-radius: 39px !important;
     letter-spacing: .1em;
     font-weight: 500;
+    border: 2px solid $color-accent;
+    &:hover {
+      background-color: #fff;
+      border: 2px solid $color-accent;
+      color: $color-accent;
+      opacity: 1 !important;
+      &::after {
+        border-right: 2px solid $color-accent;
+        border-top: 2px solid $color-accent;
+      }
+    }
   }
   &--m {
     @include is-responsive {

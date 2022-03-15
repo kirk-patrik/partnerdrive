@@ -1,29 +1,112 @@
 .p-form {
+  padding: 205px 0 160px;
+  @include is-responsive {
+    padding: 121px 0 103px;
+  }
   $parent: &;
-  &__group {
-    display: flex;
-    width: 100%;
-    gap: 1rem;
-    align-items: center;
-    #{$parent}__container {
-      flex: 1 1 auto;
-      &:not(:first-child) {
-        margin-left: auto;
-      }
+  &__inner {
+    padding: 66px 50px 64px;
+    background-color: #e8e8e8;
+    margin: 65px auto 0 !important;
+    @include is-responsive {
+      padding: 27px 16px 56px;
+      margin: 56px auto 0 !important;
     }
-    &--buttonArea {
-      margin-top: 2rem;
-      button,
-      a {
-        &:only-child {
-          max-width: 50%;
-          margin: auto;
-        }
+  }
+  &__container {
+    margin-bottom: 40px;
+    @include is-responsive {
+      margin-bottom: 26px;
+    }
+    label {
+      @include  font-line(16, 16);
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: #352A2A;
+      display: inline-block;
+      margin-bottom: 11px;
+      span {
+        color: $color-accent
+      }
+      @include is-responsive {
+        @include  font-line(15, 15);
       }
     }
   }
-  & > &__container,
   &__group {
-    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    @include is-responsive {
+      flex-direction: column;
+    }
+  }
+  &__control {
+    width: 100%;
+  }
+  &__control--half {
+    width: 429px;
+    @include is-responsive {
+      width: 100%;
+      &:first-child {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  &__policy {
+    padding-top: 25px;
+    @include font-line(15, 21);
+    font-weight: 500;
+    letter-spacing: .1em;
+    color: #352A2A;
+    margin-bottom: 41px;
+    @include is-responsive {
+      @include font-line(15, 26);
+    }
+    a {
+      color: $color-accent;
+      border-bottom: 1px solid #C4C4C4;
+      padding-bottom: 2px;
+      @include is-responsive {
+        padding-bottom: 0;
+      }
+    }
+  }
+  input, textarea, select {
+    padding: 21.5px 24px;
+    border: 0;
+    @include font-line(15, 21);
+    font-weight: 500;
+    letter-spacing: .1em;
+    color: #A5A5A5;
+    @include is-responsive {
+      padding: 21.5px 8px;
+      @include font-line(14, 20);
+    }
+  }
+  textarea {
+    max-height: 234px;
+    width: 100%;
+    font-family: $font-family-base;
+    @include is-responsive {
+      max-height: 200px;
+      padding: 16px 8px;
+    }
+  }
+  select {
+    font-family: $font-family-base;
+    width: 100%;
+    color: #352A2A;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    position: relative;
+    background: url(../tiny/icon/icon_arrow-down.svg) no-repeat 97% white;
+    @include is-responsive {
+      padding: 16px 8px;
+    }
+    &:focus-visible {
+      border: 0;
+      outline: none;
+    }
   }
 }
