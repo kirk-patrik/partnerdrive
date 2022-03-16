@@ -50,14 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     $('.sect_4__slider').slick({
         dots: false,
-        infinite: true,
         speed: 300,
+        swipe: false,
         slidesToShow: 3.4,
         slidesToScroll: 1,
         arrows: false,
-        swipe: false,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -69,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         ]
     });
+    $('.sect_4__slider').slick('slickGoTo', 1);
 
     $('.cases__slider').slick({
         dots: false,

@@ -195,26 +195,57 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <div class="p-content02__col">
                 <p class="heading">取り扱い商材も様々</p>
                 <ul class="sect_4__slider">
-                    <li>
-                        <img src="<?= resource('img', 'raw/sect_4-img01.png'); ?>" alt="sect_4-img01">
-                        <p>経理ソリューション</p>
-                        <p>株式会社ミシシッピソリューション</p>
-                    </li>
-                    <li>
-                        <img src="<?= resource('img', 'raw/sect_4-img02.png'); ?>" alt="sect_4-img01">
-                        <p>運輸テクノロジー</p>
-                        <p>株式会社ラプラタテクノロジー</p>
-                    </li>
-                    <li>
-                        <img src="<?= resource('img', 'raw/sect_4-img03.png'); ?>" alt="sect_4-img01">
-                        <p>在庫管理システム</p>
-                        <p>株式会社ニジェールロジスティクス</p>
-                    </li>
-                    <li>
-                        <img src="<?= resource('img', 'raw/sect_4-img04.png'); ?>" alt="sect_4-img01">
-                        <p>太陽光パネル</p>
-                        <p>株式会社リカオレネクキャスト</p>
-                    </li>
+                    <?php
+                    $productHandled = [
+                        [
+                            'frame' => 'sect_4-img01.png',
+                            'txt01' => '経理ソリューション',
+                            'txt02' => '株式会社ミシシッピソリューション',
+                        ],
+                        [
+                            'frame' => 'sect_4-img02.png',
+                            'txt01' => '運輸テクノロジー',
+                            'txt02' => '株式会社ラプラタテクノロジー',
+                        ],
+                        [
+                            'frame' => 'sect_4-img03.png',
+                            'txt01' => '在庫管理システム',
+                            'txt02' => '株式会社ニジェールロジスティクス',
+                        ],
+                        [
+                            'frame' => 'sect_4-img04.png',
+                            'txt01' => '太陽光パネル',
+                            'txt02' => '株式会社リカオレネクキャスト',
+                        ],
+                        [
+                            'frame' => 'sect_4-img05.png',
+                            'txt01' => '蓄電池',
+                            'txt02' => '株式会社ザンベジドライブ',
+                        ],
+                        [
+                            'frame' => 'sect_4-img06.png',
+                            'txt01' => '決済システム',
+                            'txt02' => '株式会社ニジェールデザイン',
+                        ],
+                        [
+                            'frame' => 'sect_4-img07.png',
+                            'txt01' => '健康保険',
+                            'txt02' => '株式会社ガンジスライフ',
+                        ],
+                        [
+                            'frame' => 'sect_4-img08.png',
+                            'txt01' => 'サイネージ',
+                            'txt02' => '株式会社エニセイサービス',
+                        ],
+                    ];
+                    ?>
+                    <?php foreach ($productHandled as $val) : ?>
+                        <li>
+                            <img src="<?= resource('img', 'raw/') . $val['frame']; ?>" alt="sect_4-img01">
+                            <p><?= $val['txt01']; ?></p>
+                            <p><?= $val['txt02']; ?></p>
+                        </li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
@@ -247,29 +278,29 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                             <p class="heading">
                                 セールス向け
                             </p>
-                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span></span></p>
                             <p class="line"><span></span></p>
-                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span></span></p>
                             <p class="line"><span></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
                         </div>
                         <div class="supply">
                             <p class="heading">
-                            サプライ向け
+                                サプライ向け
                             </p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
                             <p class="line"><span></span></p>
-                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span></span></p>
                             <p class="line"><span></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
-                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
+                            <p class="circ"><span></span></p>
                         </div>
                     </div>
                 </div>

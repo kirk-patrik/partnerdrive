@@ -126,7 +126,8 @@
 .sect_4 {
   &__slider {
     margin-top: 84px;
-    margin-left: -34px;
+    // margin-left: -125px;
+    width: 100%;
     li {
       background: #fff;
       padding: 8px;
@@ -153,7 +154,7 @@
     .slick-slide {
       margin: 0 8px !important;
       @include is-laptop {
-        width: 160px !important;
+        height: 233px;
       }
     }
   }
