@@ -333,7 +333,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
-<section class="sect_5 u-d-n-responsive" id="sect_5">
+<section class="sect_5" id="sect_5">
     <div class="l-wrap">
         <p class="u-f-ta-c c-heading01__main">ご利用までの流れ<span>Step</span></p>
         <div class="sect_5__content">

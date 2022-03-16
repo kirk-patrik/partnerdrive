@@ -342,7 +342,7 @@
               }
             }
             .line {
-              background-color: #EAEAEA;
+              background-color: #eaeaea;
               span {
                 width: 24px;
                 height: 4px;
@@ -396,7 +396,7 @@
                 }
               }
               .line {
-                background-color: #FF9588;
+                background-color: #ff9588;
                 span {
                   background-color: #d84533;
                 }
@@ -492,6 +492,9 @@
   padding: 291px 0 230px;
   position: relative;
   background-color: #fff;
+  @include is-responsive {
+    padding: 168px 0 81px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -501,9 +504,15 @@
     height: 100%;
     background-color: #f7f7f7;
     clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+    @include is-responsive {
+      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    }
   }
   &__content {
     padding: 100px 0 0;
+    @include is-responsive {
+      padding: 60px 0 0;
+    }
     .row {
       max-width: 900px;
       margin: 0 auto;
@@ -515,6 +524,12 @@
       justify-content: space-between;
       position: relative;
       margin-top: 77px;
+      @include is-responsive {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 122px;
+      }
       &:first-child {
         margin-top: 0;
       }
@@ -524,10 +539,17 @@
         .left {
           p {
             position: relative;
-            left: -10px;
+            @include is-laptop {
+              left: -10px;
+            }
           }
           img {
-            margin-left: 12px;
+            @include is-laptop {
+              margin-left: 12px;
+            }
+            @include is-responsive {
+              right: -17px;
+            }
           }
         }
       }
@@ -548,11 +570,27 @@
         height: 37px;
         left: 0;
         width: 100%;
+        @include is-responsive {
+          background: url(../../tiny/icon/step-after-sp.svg) no-repeat;
+          background-position: center;
+          background-size: cover;
+          bottom: -84px;
+          height: 60px;
+        }
+        @include is-max(500px) {
+          bottom: -60px;
+          height: 37px;
+        }
       }
       .left {
         display: flex;
         align-items: center;
         width: calc(100% - 480px);
+        @include is-responsive {
+          width: 100%;
+          justify-content: center;
+          margin-bottom: 35px;
+        }
         p {
           @include font-line(121, 121);
           font-weight: 600;
@@ -564,11 +602,20 @@
         img {
           width: 160px;
           margin-left: 34px;
+          @include is-responsive {
+            position: relative;
+            right: -25px;
+            margin: 0;
+          }
         }
       }
       .right {
         margin-left: 50px;
         width: 581px;
+        @include is-responsive {
+          width: 100%;
+          margin-left: 0;
+        }
         & p:first-child {
           @include font-line(20, 20);
           letter-spacing: 0.1em;
