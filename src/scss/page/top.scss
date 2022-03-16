@@ -181,7 +181,7 @@
     .col {
       display: flex;
       align-items: center;
-      padding: 0 84px;
+      padding: 0 54px 0 84px;
       justify-content: space-between;
       position: relative;
       margin-top: 77px;
@@ -238,7 +238,7 @@
       }
       .right {
         margin-left: 50px;
-        width: 480px;
+        width: 581px;
         & p:first-child {
           @include font-line(20, 20);
           letter-spacing: 0.1em;
