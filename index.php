@@ -188,7 +188,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <div class="p-content02__col">
                 <p class="heading">
                     さっそく</span>partner drive<span>を<br>
-                    使ってみましょう
+                        使ってみましょう
                 </p>
                 <a class="c-button c-button--xxl c-button--accent--d c-button--return" href="#"><span>partner drive</span>をはじめる</a>
             </div>
@@ -216,6 +216,74 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                         <p>株式会社リカオレネクキャスト</p>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sect_5 u-d-n-responsive" id="sect_5">
+    <div class="l-wrap">
+        <p class="u-f-ta-c c-heading01__main">ご利用までの流れ<span>Step</span></p>
+        <div class="sect_5__content">
+            <?php
+            $loopContent03 = [
+                [
+                    "num" => "1",
+                    "frame" => "sect_5-img01.png",
+                    "txt01" => "新規会員登録",
+                    "txt02" => "登録フォームから必要事項を入力して登録をしてください。<br>
+                    審査を通過いただく前にも一部の機能は利用可能です。",
+                ],
+                [
+                    "num" => "2",
+                    "frame" => "sect_5-img02.png",
+                    "txt01" => "審査",
+                    "txt02" => "入力いただいた内容をもとに審査を行います。<br>
+                    審査通過をもって全機能を利用可能になります。",
+                ],
+                [
+                    "num" => "3",
+                    "frame" => "sect_5-img03.png",
+                    "txt01" => "設定",
+                    "txt02" => "サプライパートナーのみなさまは商材の登録を、セールスパートナーの皆様は自社の情報登録を行なってください。",
+                ],
+                [
+                    "num" => "4",
+                    "frame" => "sect_5-img04.png",
+                    "txt01" => "ご利用開始",
+                    "txt02" => "ご利用開始です。<br>
+                    検索から最高の商材、セールスパートナーを見つけてください。",
+                ],
+            ];
+            ?>
+            <div class="row">
+                <?php foreach ($loopContent03 as $loop) : ?>
+                    <div class="col">
+                        <div class="left">
+                            <p><?= $loop['num']; ?></p>
+                            <img src="<?= resource('img', 'raw/') . $loop['frame']; ?>" alt="sect_5-img01">
+                        </div>
+                        <div class="right">
+                            <p><?= $loop['txt01']; ?></p>
+                            <p><?= $loop['txt02']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sect_6" id="sect_6">
+    <div class="p-content02">
+        <div class="p-content02__row u-d-f-s">
+            <div class="p-content02__col p-content02__col--right">
+                <p class="heading">
+                    さっそく</span>partner drive<span>を<br>
+                        使ってみましょう
+                </p>
+                <a class="c-button c-button--xxl c-button--accent--d c-button--return" href="#"><span>partner drive</span>をはじめる</a>
+            </div>
+            <div class="p-content02__col p-content02__col--flex">
+                <img src="<?= resource('img', 'raw/sect_6-img01.png'); ?>" alt="sect_6-img01">
             </div>
         </div>
     </div>

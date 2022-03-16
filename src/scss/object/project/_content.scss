@@ -201,6 +201,24 @@
           }
         }
       }
+      &--flex {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        @include is-responsive {
+          padding: 80px 0 !important;
+        }
+        img {
+          width: 417px;
+          @include is-responsive {
+            width: 325px;
+          }
+        }
+      }
+      &--right {
+        right: 0 !important;
+        left: unset !important;
+      }
     }
   }
 }

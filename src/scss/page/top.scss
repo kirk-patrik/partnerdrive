@@ -158,6 +158,103 @@
     }
   }
 }
+.sect_5 {
+  padding: 291px 0 230px;
+  position: relative;
+  background-color: #fff;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #F7F7F7;
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
+  }
+  &__content {
+    padding: 100px 0 0;
+    .row {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .col {
+      display: flex;
+      align-items: center;
+      padding: 0 84px;
+      justify-content: space-between;
+      position: relative;
+      margin-top: 77px;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:nth-child(2),
+      &:nth-child(3),
+      &:last-child {
+        .left {
+          p {
+            position: relative;
+            left: -10px;
+          }
+          img {
+            margin-left: 12px;
+          }
+        }
+      }
+      &:last-child {
+        &::after,
+        &::before {
+          content: unset;
+        }
+      }
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+      }
+      &::before {
+        background: url(../../tiny/icon/step-after.svg) no-repeat;
+        bottom: -54px;
+        height: 37px;
+        left: 0;
+        width: 100%;
+      }
+      .left {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 480px);
+        p {
+          @include font-line(121, 121);
+          font-weight: 600;
+          letter-spacing: 0;
+          color: $color-accent;
+          opacity: 0.2;
+          font-family: $font-family-en;
+        }
+        img {
+          width: 160px;
+          margin-left: 34px;
+        }
+      }
+      .right {
+        margin-left: 50px;
+        width: 480px;
+        & p:first-child {
+          @include font-line(20, 20);
+          letter-spacing: 0.1em;
+          color: $color-accent;
+          font-weight: 700;
+        }
+        & p:last-child {
+          @include font-line(15, 26);
+          letter-spacing: 0.1em;
+          font-weight: 500;
+          padding-top: 13px;
+        }
+      }
+    }
+  }
+}
 .sect_7 {
   background-color: #f7f7f7;
   padding: 135px 0 120px;
