@@ -169,7 +169,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     clip-path: polygon(0 0, 100% 16%, 100% 100%, 0% 100%);
   }
   &__content {
@@ -251,6 +251,92 @@
           font-weight: 500;
           padding-top: 13px;
         }
+      }
+    }
+  }
+}
+.sect_6 {
+  .cases {
+    padding: 186px 0 120px;
+    overflow: hidden;
+    @include is-responsive {
+      padding: 121px 0 80px;
+    }
+    &__content {
+      padding-top: 81px;
+    }
+    .cases__slider {
+      padding-bottom: 81px;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      @include is-responsive {
+        padding-bottom: 41px;
+      }
+      &Item {
+        background-color: #fff;
+        box-shadow: 0px 0px 16px #00000015;
+        height: 344px;
+        @include is-responsive {
+          min-height: 378px;
+          height: auto;
+          padding-bottom: 20px;
+        }
+        @include is-max(500px) {
+          min-height: 348px;
+        }
+        .frame {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+          @include is-responsive {
+            height: auto;
+            width: 100%;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .body {
+          @include font-line(16, 24);
+          letter-spacing: 0.05em;
+          font-weight: 700;
+          padding: 16px;
+        }
+        .footer {
+          @include font-line(14, 14);
+          letter-spacing: 0.1em;
+          font-weight: 500;
+          color: #8d8d8d;
+          padding: 0 16px;
+        }
+      }
+      .slick-slide {
+        margin: 0 15.5px;
+      }
+      .slick-list {
+        margin: 0 -15.5px;
+      }
+      .slick-track {
+        padding-bottom: 15px;
+      }
+      .slick-active.slick-current {
+        box-shadow: 0px 0px 16px #ea422d39;
+      }
+      .slick-arrow {
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+      }
+      .slick-prev {
+        top: 41%;
+        transform: translateY(-50%);
+        left: -45px;
+      }
+      .slick-next {
+        top: 41%;
+        transform: translateY(-50%);
+        right: -45px;
       }
     }
   }

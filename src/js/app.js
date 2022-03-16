@@ -70,6 +70,26 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     });
 
+    $('.cases__slider').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow:"<img class='a-left control-c prev slick-prev' src='public/release/tiny/icon/slick-arrow-left.svg'>",
+        nextArrow:"<img class='a-right control-c next slick-next' src='public/release/tiny/icon/slick-arrow-right.svg'>",
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1.3,
+                    arrows: false
+                }
+            },
+        ]
+    });
+
 
 
     /**

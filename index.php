@@ -287,6 +287,57 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             </div>
         </div>
     </div>
+    <div class="cases">
+        <div class="l-wrap">
+            <p class="u-f-ta-c c-heading01__main">導入事例<span>case</span></p>
+            <div class="cases__content">
+                <?php 
+                    $caseLoop = [
+                        [
+                            'frame' => 'case-img01.png',
+                            'body' => 'Paraviが実践する最新の統合メディアプランニング事例 〜テレビ×デジタル×DOOHのトリプルメディア効果検証〜',
+                        ],
+                        [
+                            'frame' => 'case-img02.png',
+                            'body' => '来店者の属性、単価、頻度を多角的に可視化 松屋が店舗集客でDOOHを活用した理由',
+                        ],
+                        [
+                            'frame' => 'case-img03.png',
+                            'body' => '「IT事業者」「製造業」「小売り」「ヘルスケア」の4業種に携わる人々をキャンペーンターゲットとして設定',
+                        ],
+                        [
+                            'frame' => 'case-img01.png',
+                            'body' => 'Paraviが実践する最新の統合メディアプランニング事例 〜テレビ×デジタル×DOOHのトリプルメディア効果検証〜',
+                        ],
+                        [
+                            'frame' => 'case-img02.png',
+                            'body' => '来店者の属性、単価、頻度を多角的に可視化 松屋が店舗集客でDOOHを活用した理由',
+                        ],
+                        [
+                            'frame' => 'case-img03.png',
+                            'body' => '「IT事業者」「製造業」「小売り」「ヘルスケア」の4業種に携わる人々をキャンペーンターゲットとして設定',
+                        ],
+                    ];
+                ?>
+                <ul class="cases__slider">
+                    <?php foreach($caseLoop as $case) : ?>
+                    <li class="cases__sliderItem">
+                        <div class="frame">
+                            <img src="<?= resource('img', 'raw/') . $case['frame'] ?>" alt="">
+                        </div>
+                        <p class="body">
+                           <?= $case['body']; ?>
+                        </p>
+                        <p class="footer">
+                            株式会社 Global Cast
+                        </p>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+                <a href="#" class="c-button c-button--accent c-button--l u-m-c">導入事例をもっと見る</a>
+        </div>
+    </div>
 </section>
 <section class="sect_7" id="sect_7">
     <div class="l-wrap">
