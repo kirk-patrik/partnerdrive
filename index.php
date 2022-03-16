@@ -219,6 +219,11 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             </div>
         </div>
     </div>
+    <div class="features u-natural__width">
+        <div class="l-wrap">
+        <p class="c-heading01__main c-heading01__main--left">partner driveの機能<span>features</span></p>
+        </div>
+    </div>
 </section>
 <section class="sect_5 u-d-n-responsive" id="sect_5">
     <div class="l-wrap">
