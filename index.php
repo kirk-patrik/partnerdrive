@@ -221,7 +221,84 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
     </div>
     <div class="features u-natural__width">
         <div class="l-wrap">
-        <p class="c-heading01__main c-heading01__main--left">partner driveの機能<span>features</span></p>
+            <p class="c-heading01__main c-heading01__main--left">partner driveの機能<span>features</span></p>
+            <div class="features__content">
+                <div class="row">
+                    <div class="col">
+                        <div class="left">
+                            <p>調達</p>
+                            <p>導入</p>
+                            <p>運用<br class="u-d-n-laptop">管理</p>
+                        </div>
+                        <div class="right">
+                            <a href="#" class="features__btn">ユーザー登録</a>
+                            <a href="#" class="features__btn disabled">サービス(商材)登録機能</a>
+                            <a href="#" class="features__btn">サービス(商材)検索機能</a>
+                            <a href="#" class="features__btn disabled">セールスパートナースカウト機能</a>
+                            <a href="#" class="features__btn">メッセージ機能(チャット)</a>
+                            <a href="#" class="features__btn">研究動画・資料ダウンロード機能</a>
+                            <a href="#" class="features__btn">獲得案件登録・ステータス管理機能</a>
+                            <a href="#" class="features__btn">見込み報酬金額確認機能</a>
+                            <a href="#" class="features__btn">経済条件更改機能</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="sales isActive">
+                            <p class="heading">
+                                セールス向け
+                            </p>
+                            <p class="circ"><span ></span></p>
+                            <p class="line"><span></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="line"><span></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                        </div>
+                        <div class="supply">
+                            <p class="heading">
+                            サプライ向け
+                            </p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="line"><span></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="line"><span></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                            <p class="circ"><span ></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="takealook u-natural__width">
+        <div class="l-wrap">
+            <p class="heading">各機能を見てみる</p>
+            <div class="content">
+                <div class="row">
+                    <a href="#" class="col">
+                        <img src="<?= resource('img', 'raw/function-img01.png'); ?>" alt="">
+                        <p class="txt">ホーム</p>
+                    </a>
+                    <a href="#" class="col">
+                        <img src="<?= resource('img', 'raw/function-img02.png'); ?>" alt="">
+                        <p class="txt">商材管理</p>
+                    </a>
+                    <a href="#" class="col">
+                        <img src="<?= resource('img', 'raw/function-img03.png'); ?>" alt="">
+                        <p class="txt">マッチング管理</p>
+                    </a>
+                    <a href="#" class="col">
+                        <img src="<?= resource('img', 'raw/function-img04.png'); ?>" alt="">
+                        <p class="txt">案件管理</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -296,51 +373,51 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         <div class="l-wrap">
             <p class="u-f-ta-c c-heading01__main">導入事例<span>case</span></p>
             <div class="cases__content">
-                <?php 
-                    $caseLoop = [
-                        [
-                            'frame' => 'case-img01.png',
-                            'body' => 'Paraviが実践する最新の統合メディアプランニング事例 〜テレビ×デジタル×DOOHのトリプルメディア効果検証〜',
-                        ],
-                        [
-                            'frame' => 'case-img02.png',
-                            'body' => '来店者の属性、単価、頻度を多角的に可視化 松屋が店舗集客でDOOHを活用した理由',
-                        ],
-                        [
-                            'frame' => 'case-img03.png',
-                            'body' => '「IT事業者」「製造業」「小売り」「ヘルスケア」の4業種に携わる人々をキャンペーンターゲットとして設定',
-                        ],
-                        [
-                            'frame' => 'case-img01.png',
-                            'body' => 'Paraviが実践する最新の統合メディアプランニング事例 〜テレビ×デジタル×DOOHのトリプルメディア効果検証〜',
-                        ],
-                        [
-                            'frame' => 'case-img02.png',
-                            'body' => '来店者の属性、単価、頻度を多角的に可視化 松屋が店舗集客でDOOHを活用した理由',
-                        ],
-                        [
-                            'frame' => 'case-img03.png',
-                            'body' => '「IT事業者」「製造業」「小売り」「ヘルスケア」の4業種に携わる人々をキャンペーンターゲットとして設定',
-                        ],
-                    ];
+                <?php
+                $caseLoop = [
+                    [
+                        'frame' => 'case-img01.png',
+                        'body' => 'Paraviが実践する最新の統合メディアプランニング事例 〜テレビ×デジタル×DOOHのトリプルメディア効果検証〜',
+                    ],
+                    [
+                        'frame' => 'case-img02.png',
+                        'body' => '来店者の属性、単価、頻度を多角的に可視化 松屋が店舗集客でDOOHを活用した理由',
+                    ],
+                    [
+                        'frame' => 'case-img03.png',
+                        'body' => '「IT事業者」「製造業」「小売り」「ヘルスケア」の4業種に携わる人々をキャンペーンターゲットとして設定',
+                    ],
+                    [
+                        'frame' => 'case-img01.png',
+                        'body' => 'Paraviが実践する最新の統合メディアプランニング事例 〜テレビ×デジタル×DOOHのトリプルメディア効果検証〜',
+                    ],
+                    [
+                        'frame' => 'case-img02.png',
+                        'body' => '来店者の属性、単価、頻度を多角的に可視化 松屋が店舗集客でDOOHを活用した理由',
+                    ],
+                    [
+                        'frame' => 'case-img03.png',
+                        'body' => '「IT事業者」「製造業」「小売り」「ヘルスケア」の4業種に携わる人々をキャンペーンターゲットとして設定',
+                    ],
+                ];
                 ?>
                 <ul class="cases__slider">
-                    <?php foreach($caseLoop as $case) : ?>
-                    <li class="cases__sliderItem">
-                        <div class="frame">
-                            <img src="<?= resource('img', 'raw/') . $case['frame'] ?>" alt="">
-                        </div>
-                        <p class="body">
-                           <?= $case['body']; ?>
-                        </p>
-                        <p class="footer">
-                            株式会社 Global Cast
-                        </p>
-                    </li>
+                    <?php foreach ($caseLoop as $case) : ?>
+                        <li class="cases__sliderItem">
+                            <div class="frame">
+                                <img src="<?= resource('img', 'raw/') . $case['frame'] ?>" alt="">
+                            </div>
+                            <p class="body">
+                                <?= $case['body']; ?>
+                            </p>
+                            <p class="footer">
+                                株式会社 Global Cast
+                            </p>
+                        </li>
                     <?php endforeach; ?>
                 </ul>
             </div>
-                <a href="#" class="c-button c-button--accent c-button--l u-m-c">導入事例をもっと見る</a>
+            <a href="#" class="c-button c-button--accent c-button--l u-m-c">導入事例をもっと見る</a>
         </div>
     </div>
 </section>

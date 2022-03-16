@@ -26,6 +26,9 @@
           @include font-line(76, 62);
           top: -42px;
         }
+        @include is-max(350px) {
+          font-size: 20vw;
+        }
       }
       &--left {
         span {
