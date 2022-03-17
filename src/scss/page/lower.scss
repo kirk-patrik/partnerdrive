@@ -1,0 +1,64 @@
+@import "../core/mixins/*";
+@import "../core/root/_variables";
+.sp-modal-content {
+   display: none; 
+   @include is-responsive {
+       display: block;
+   }
+  padding: 88px 0 100px;
+  .title {
+    @include font-line(18, 18);
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: $color-accent;
+    margin-bottom: 17px;
+  }
+  .steps {
+    margin-top: 32px;
+    &Item {
+      @include font-line(15, 25);
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      display: flex;
+      align-items: baseline;
+      padding: 16px;
+      background-color: #f2f2f2;
+      margin-bottom: 8px;
+      &:last-child {
+          margin-bottom: 0;
+      }
+      .num {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $color-accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        @include font-line(16, 16);
+        font-family: $font-family-en;
+        font-weight: 700;
+        padding-top: 2px;
+      }
+      .txt {
+        width: calc(100% - 53px);
+        margin-left: 8px;
+        p {
+          margin-bottom: 8px;
+        }
+        & p:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .highlight {
+    color: $color-accent;
+    font-weight: 700;
+    @include font-line(16, 25);
+  }
+  img {
+    width: 100%;
+  }
+}

@@ -90,27 +90,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let modalBtn = document.querySelectorAll('.modal-btn');
-    let modalClose = document.querySelectorAll('modalClose');
     let modalParent01 = document.querySelector('.p-modal01');
     let modalParent02 = document.querySelector('.p-modal02');
     let modalParent03 = document.querySelector('.p-modal03');
     let modalParent04 = document.querySelector('.p-modal04');
-    modalBtn.forEach(btn => {
-        let destination = btn.getAttribute('data-modal');
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            if (destination == 'case1') {
-                modalParent01.classList.replace('p-modal--close', 'p-modal--active');
-            } else if (destination == 'case2') {
-                modalParent03.classList.replace('p-modal--close', 'p-modal--active')
-            } else if (destination == 'case3') {
-                modalParent04.classList.replace('p-modal--close', 'p-modal--active')
-            } else {
-
-                modalParent02.classList.replace('p-modal--close', 'p-modal--active')
-            }
+    // modal for button | redirect lower pages if sp view
+    $(window).on('load', function () {
+        let w = $(window).width();
+        modalBtn.forEach(btn => {
+            let destination = btn.getAttribute('data-modal');
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                if (destination == 'case1') {
+                    if (w > 992) {
+                        modalParent01.classList.replace('p-modal--close', 'p-modal--active');
+                    } else {
+                        window.location.href = '/lower-home.php';
+                    }
+                } else if (destination == 'case2') {
+                    if (w > 992) {
+                        modalParent03.classList.replace('p-modal--close', 'p-modal--active');
+                    } else {
+                        window.location.href = '/lower-merchandise.php';
+                    }
+                } else if (destination == 'case3') {
+                    if (w > 992) {
+                        modalParent04.classList.replace('p-modal--close', 'p-modal--active');
+                    } else {
+                        window.location.href = '/lower-matching.php';
+                    }
+                } else {
+                    if (w > 992) {
+                        modalParent02.classList.replace('p-modal--close', 'p-modal--active');
+                    } else {
+                        window.location.href = '/lower-project.php';
+                    }
+                }
+            });
         });
     });
+
     // closeModal
     $('.modalClose').click(() => {
         modalParent01.classList.replace('p-modal--active', 'p-modal--close');
