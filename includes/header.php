@@ -23,7 +23,7 @@
 </head>
 
 <body class="page">
-    <header class="l-header page__top">
+    <header class="l-header page__top <?= trim($_SERVER['PHP_SELF'], '/') == 'rules.php' ? 'activate' : '' ?>">
         <!-- header start here -->
         <nav class="l-header__navbar l-header__row">
             <div class="l-header__col">

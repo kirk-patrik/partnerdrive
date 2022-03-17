@@ -1,0 +1,71 @@
+@import "../core/mixins/*";
+@import "../core/root/_variables";
+.rules {
+  padding: 220px 0 137px;
+  @include is-responsive {
+    padding: 145px 0 110px;
+  }
+  &__sub {
+    @include font-line(15, 27);
+    letter-spacing: 0.1em;
+    text-align: center;
+    max-width: 546px;
+    margin: 0 auto;
+    padding: 75px 0 81px;
+    font-weight: 500;
+    @include is-responsive {
+      max-width: 100%;
+      text-align: left;
+      padding: 46px 0 49px;
+      letter-spacing: .08em;
+    }
+  }
+  &__content-wrapper {
+    padding: 56px 50px;
+    background: #f7f7f7;
+    @include is-responsive {
+        padding: 34px 16px;
+    }
+  }
+  &__content-main {
+    margin-bottom: 48px;
+    @include is-responsive {
+        margin-bottom: 32px;
+    }
+    &:first-child {
+        .body {
+            margin-left: 0;
+        }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .heading {
+      @include font-line(18, 26);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: $color-accent;
+      margin-bottom: 17px;
+      @include is-responsive {
+        @include font-line(16, 24);
+      }
+    }
+    .body {
+      @include font-line(14, 27);
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      max-width: 870px;
+      margin-bottom: 8px;
+      margin-left: 20px;
+      span {
+        font-family: $font-family-en;
+        display: inline-block;
+        margin-right: 8px;
+        text-indent: -20px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
