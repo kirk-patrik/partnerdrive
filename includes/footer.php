@@ -19,8 +19,8 @@
                     <li><a href="#"><span>お問い合わせ</span></a></li>
                 </ul>
                 <ul class="l-footer__menu02">
-                    <li><a href="#">利用規約</a></li>
-                    <li><a href="#">プライバシーポリシー<img src="<?= resource('img', 'icon/icon_box-arrow.svg'); ?>" alt=""></a></li>
+                    <li><a href="/rules.php">利用規約</a></li>
+                    <li><a href="https://global-cast.co.jp/privacypolicy/">プライバシーポリシー<img src="<?= resource('img', 'icon/icon_box-arrow.svg'); ?>" alt=""></a></li>
                 </ul>
                 <p class="copyright u-d-n-laptop">© GlobalCast Co.,Ltd.</p>
             </div>

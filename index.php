@@ -128,9 +128,9 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                 "ttl" => "<span>商材調達</span>の課題も",
                 "frame" => "sect_3-img01.png",
                 "content" => [
-                    "txt01" => " 掲載されている豊富な商材の中から、<span>セールスパートナー様の特徴に合った商材</span>を柔軟に検索することが可能。",
-                    "txt02" => " 商材取り扱い打診後、<span>システム上のメッセージ機能で円滑に交渉・取り扱い開始まで</span>サポート。",
-                    "txt03" => " 研修や契約など稼働開始までに必要なリードタイムを<span>システムで一元サポートする</span>ことで短縮。",
+                    "txt01" => [" 掲載されている豊富な商材の中から、<span>セールスパートナー様の特徴に合った商材</span>を柔軟に検索することが可能。", "case2"],
+                    "txt02" => [" 商材取り扱い打診後、<span>システム上のメッセージ機能で円滑に交渉・取り扱い開始まで</span>サポート。", "case3"],
+                    "txt03" => [" 研修や契約など稼働開始までに必要なリードタイムを<span>システムで一元サポートする</span>ことで短縮。", "case2"],
                 ],
             ],
             [
@@ -138,8 +138,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                 "ttl" => "<span>商材調達</span>の課題も",
                 "frame" => "sect_3-img02.png",
                 "content" => [
-                    "txt01" => "<span>商材ごとに販売に必要な研修資料が動画が掲載</span>されているため、取り扱い後すぐに商材知識やレギュレーション、売り方の落とし込みが可能。",
-                    "txt02" => "<span>営業員ごとに獲得成果を管理</span>することで営業員別の実績をシステム上で管理可能。",
+                    "txt01" => ["<span>商材ごとに販売に必要な研修資料が動画が掲載</span>されているため、取り扱い後すぐに商材知識やレギュレーション、売り方の落とし込みが可能。", "case2"],
+                    "txt02" => ["<span>営業員ごとに獲得成果を管理</span>することで営業員別の実績をシステム上で管理可能。", "case1"],
                 ],
             ],
             [
@@ -147,8 +147,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                 "ttl" => "<span>商材調達</span>の課題も",
                 "frame" => "sect_3-img03.png",
                 "content" => [
-                    "txt01" => "獲得後、報酬発生までのステータス追いは販売代理店にとって非常に重要な業務となりますが、<span>システム上で案件管理ができるためステータス状況が簡単に把握</span>できます。",
-                    "txt02" => "獲得案件の報酬がいつ、いくら入っているかは非常に重要な情報となりますが、<span>システム上で期間ごとに集計されるため入金見込みが容易</span>に把握できます。",
+                    "txt01" => ["獲得後、報酬発生までのステータス追いは販売代理店にとって非常に重要な業務となりますが、<span>システム上で案件管理ができるためステータス状況が簡単に把握</span>できます。", "case04"],
+                    "txt02" => ["獲得案件の報酬がいつ、いくら入っているかは非常に重要な情報となりますが、<span>システム上で期間ごとに集計されるため入金見込みが容易</span>に把握できます。", "case04"],
                 ],
             ],
         ];
@@ -168,9 +168,9 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                                 <?php foreach ($loop02['content'] as $cont) : ?>
                                     <div class="p-content01__cont">
                                         <p>
-                                            <?= $cont; ?>
+                                            <?= $cont[0]; ?>
                                         </p>
-                                        <a href="#" class="c-button c-button--s">機能を見る</a>
+                                        <a href="#" class="c-button c-button--s modal-btn" data-modal="<?= $cont[1]; ?>">機能を見る</a>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -262,15 +262,15 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                             <p>運用<br class="u-d-n-laptop">管理</p>
                         </div>
                         <div class="right">
-                            <a href="#" class="features__btn">ユーザー登録</a>
-                            <a href="#" class="features__btn disabled">サービス(商材)登録機能</a>
-                            <a href="#" class="features__btn">サービス(商材)検索機能</a>
-                            <a href="#" class="features__btn disabled">セールスパートナースカウト機能</a>
-                            <a href="#" class="features__btn">メッセージ機能(チャット)</a>
-                            <a href="#" class="features__btn">研究動画・資料ダウンロード機能</a>
-                            <a href="#" class="features__btn">獲得案件登録・ステータス管理機能</a>
-                            <a href="#" class="features__btn">見込み報酬金額確認機能</a>
-                            <a href="#" class="features__btn">経済条件更改機能</a>
+                            <a href="#" class="modal-btn" data-modal="case4">ユーザー登録</a>
+                            <a href="#" class="disabled">サービス(商材)登録機能</a>
+                            <a href="#" class="modal-btn" data-modal="case2">サービス(商材)検索機能</a>
+                            <a href="#" class="disabled">セールスパートナースカウト機能</a>
+                            <a href="#" class="modal-btn" data-modal="case4">メッセージ機能(チャット)</a>
+                            <a href="#" class="modal-btn" data-modal="case2">研究動画・資料ダウンロード機能</a>
+                            <a href="#" class="modal-btn" data-modal="case1">獲得案件登録・ステータス管理機能</a>
+                            <a href="#" class="modal-btn" data-modal="case4">見込み報酬金額確認機能</a>
+                            <a href="#" class="modal-btn" data-modal="case3">経済条件更改機能</a>
                         </div>
                     </div>
                     <div class="col">
@@ -312,19 +312,19 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <p class="heading">各機能を見てみる</p>
             <div class="content">
                 <div class="row">
-                    <a href="#" class="col">
+                    <a href="#" class="col modal-btn" data-modal="case1">
                         <img src="<?= resource('img', 'raw/function-img01.png'); ?>" alt="">
                         <p class="txt">ホーム</p>
                     </a>
-                    <a href="#" class="col">
+                    <a href="#" class="col modal-btn" data-modal="case2">
                         <img src="<?= resource('img', 'raw/function-img02.png'); ?>" alt="">
                         <p class="txt">商材管理</p>
                     </a>
-                    <a href="#" class="col">
+                    <a href="#" class="col modal-btn" data-modal="case3">
                         <img src="<?= resource('img', 'raw/function-img03.png'); ?>" alt="">
                         <p class="txt">マッチング管理</p>
                     </a>
-                    <a href="#" class="col">
+                    <a href="#" class="col modal-btn" data-modal="case4">
                         <img src="<?= resource('img', 'raw/function-img04.png'); ?>" alt="">
                         <p class="txt">案件管理</p>
                     </a>
@@ -611,15 +611,63 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
-<div class="p-modal">
+<div class="p-modal p-modal01 p-modal--close">
     <div class="p-modal__content">
-        <ul class="toggler" id="modalClose">
+        <ul class="toggler modalClose">
             <li class="togglerItem"></li>
             <li class="togglerItem"></li>
         </ul>
         <p class="p-modal__title">ホーム</p>
         <div class="p-modal__frame">
-            <img src="<?= resource('img', 'raw/pc_modal_home.png'); ?>" alt="">
+            <img src="<?= resource('img', 'raw/modal-img01.png'); ?>" alt="">
+        </div>
+        <div class="p-modal__buttons">
+        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+        </div>
+    </div>
+</div>
+<div class="p-modal p-modal02 p-modal--close">
+    <div class="p-modal__content">
+        <ul class="toggler modalClose">
+            <li class="togglerItem"></li>
+            <li class="togglerItem"></li>
+        </ul>
+        <p class="p-modal__title">案件管理</p>
+        <div class="p-modal__frame">
+            <img src="<?= resource('img', 'raw/modal-img02.png'); ?>" alt="">
+        </div>
+        <div class="p-modal__buttons">
+        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+        </div>
+    </div>
+</div>
+<div class="p-modal p-modal03 p-modal--close">
+    <div class="p-modal__content">
+        <ul class="toggler modalClose">
+            <li class="togglerItem"></li>
+            <li class="togglerItem"></li>
+        </ul>
+        <p class="p-modal__title">商材管理</p>
+        <div class="p-modal__frame">
+            <img src="<?= resource('img', 'raw/modal-img03.png'); ?>" alt="">
+        </div>
+        <div class="p-modal__buttons">
+        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+        </div>
+    </div>
+</div>
+<div class="p-modal p-modal04 p-modal--close">
+    <div class="p-modal__content">
+        <ul class="toggler modalClose">
+            <li class="togglerItem"></li>
+            <li class="togglerItem"></li>
+        </ul>
+        <p class="p-modal__title">マッチング管理</p>
+        <div class="p-modal__frame">
+            <img src="<?= resource('img', 'raw/modal-img04.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
         <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>

@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
-        prevArrow:"<img class='a-left control-c prev slick-prev' src='public/release/tiny/icon/slick-arrow-left.svg'>",
-        nextArrow:"<img class='a-right control-c next slick-next' src='public/release/tiny/icon/slick-arrow-right.svg'>",
+        prevArrow: "<img class='a-left control-c prev slick-prev' src='public/release/tiny/icon/slick-arrow-left.svg'>",
+        nextArrow: "<img class='a-right control-c next slick-next' src='public/release/tiny/icon/slick-arrow-right.svg'>",
         responsive: [
             {
                 breakpoint: 992,
@@ -89,10 +89,34 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     });
 
-    let modalClose = document.getElementById('modalClose');
-    let modalParent = document.querySelector('.p-modal');
-    modalClose.addEventListener('click', () => {
-        modalParent.classList.add('p-modal--close');
+    let modalBtn = document.querySelectorAll('.modal-btn');
+    let modalClose = document.querySelectorAll('modalClose');
+    let modalParent01 = document.querySelector('.p-modal01');
+    let modalParent02 = document.querySelector('.p-modal02');
+    let modalParent03 = document.querySelector('.p-modal03');
+    let modalParent04 = document.querySelector('.p-modal04');
+    modalBtn.forEach(btn => {
+        let destination = btn.getAttribute('data-modal');
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            if (destination == 'case1') {
+                modalParent01.classList.replace('p-modal--close', 'p-modal--active');
+            } else if (destination == 'case2') {
+                modalParent03.classList.replace('p-modal--close', 'p-modal--active')
+            } else if (destination == 'case3') {
+                modalParent04.classList.replace('p-modal--close', 'p-modal--active')
+            } else {
+
+                modalParent02.classList.replace('p-modal--close', 'p-modal--active')
+            }
+        });
+    });
+    // closeModal
+    $('.modalClose').click(() => {
+        modalParent01.classList.replace('p-modal--active', 'p-modal--close');
+        modalParent02.classList.replace('p-modal--active', 'p-modal--close');
+        modalParent03.classList.replace('p-modal--active', 'p-modal--close');
+        modalParent04.classList.replace('p-modal--active', 'p-modal--close');
     });
 
 
