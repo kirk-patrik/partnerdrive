@@ -89,6 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
     });
 
+    let modalClose = document.getElementById('modalClose');
+    let modalParent = document.querySelector('.p-modal');
+    modalClose.addEventListener('click', () => {
+        modalParent.classList.add('p-modal--close');
+    });
+
 
 
     /**

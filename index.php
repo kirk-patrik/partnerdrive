@@ -611,6 +611,21 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
-
+<div class="p-modal">
+    <div class="p-modal__content">
+        <ul class="toggler" id="modalClose">
+            <li class="togglerItem"></li>
+            <li class="togglerItem"></li>
+        </ul>
+        <p class="p-modal__title">ホーム</p>
+        <div class="p-modal__frame">
+            <img src="<?= resource('img', 'raw/pc_modal_home.png'); ?>" alt="">
+        </div>
+        <div class="p-modal__buttons">
+        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+        </div>
+    </div>
+</div>
 <?php
 includeWithVariables('includes/footer.php', ['footerJS' => ['all.js']]) ?>
