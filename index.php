@@ -554,7 +554,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             ],
         ];
         ?>
-        <div class="p-accordion">
+        <!-- add data-aos -->
+        <div class="p-accordion" data-aos="fade-up" data-aos-duration="1000">
             <?php foreach ($faqValue as $i => $faq) : ?>
                 <div class="p-accordion__item <?= $i == '0' ? 'isActive' : '' ?>">
                     <div class="p-accordion__header">

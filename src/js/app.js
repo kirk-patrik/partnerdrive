@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     $(window).on('load', function () {
         document.getElementById('loading').className = 'loaded';
         let w = $(window).width();
+        let h = $(window).height();
         modalBtn.forEach(btn => {
             let destination = btn.getAttribute('data-modal');
             btn.addEventListener('click', e => {
@@ -146,6 +147,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         });
+        // modify modal view depending on screen
+        if (h < 768) {
+            let adjustModal = document.querySelectorAll('.p-modal__content');
+            adjustModal.forEach(item => {
+                css(item, {
+                    "height": "76%",
+                    "padding": "36px 50px 46px"
+                });
+                item.querySelector('.p-modal__frame').style.height = "71%";
+            });
+        }
     });
 
     // closeModal
