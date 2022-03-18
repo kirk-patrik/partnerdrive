@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // add autoplaySpeed
     $('.sect_4__slider').slick({
         dots: false,
         speed: 300,
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 992,
@@ -66,6 +68,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             },
         ]
+    });
+    // added sect_4__slider animation
+    $('.sect_4__slider').on('beforeChange', () => {
+        let currentActive = document.querySelector('.sect_4__slider .slick-current');
+        let currentActiveIndex = currentActive.getAttribute('data-slick-index');
+        let scrolledLast = document.querySelector('.sect_4__slider .slick-slide[data-slick-index="' + (parseInt(currentActiveIndex) + 3) + '"]');
+        $(scrolledLast).addClass('isAdded').siblings().removeClass('isAdded');
+
     });
     $('.sect_4__slider').slick('slickGoTo', 1);
 
@@ -96,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let modalParent04 = document.querySelector('.p-modal04');
     // modal for button | redirect lower pages if sp view
     $(window).on('load', function () {
+        document.getElementById('loading').className = 'loaded';
         let w = $(window).width();
         modalBtn.forEach(btn => {
             let destination = btn.getAttribute('data-modal');
@@ -137,6 +148,24 @@ document.addEventListener("DOMContentLoaded", function () {
         modalParent03.classList.replace('p-modal--active', 'p-modal--close');
         modalParent04.classList.replace('p-modal--active', 'p-modal--close');
     });
+
+    window.onscroll = () => {
+        // appear animation js
+        let appearContainer = document.querySelectorAll('.appear-container');
+        let appearContainer02 = document.querySelectorAll('.appear-container02');
+        // loop container
+        appearContainer.forEach(element => {
+            if (isScrolledIntoView(element, false, 100)) {
+                element.classList.add('animated');
+            }
+        });
+        appearContainer02.forEach(element => {
+            if (isScrolledIntoView(element, false, 100)) {
+                element.classList.add('animated');
+            }
+        });
+    }
+
 
 
 

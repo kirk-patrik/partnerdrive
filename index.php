@@ -2,11 +2,12 @@
 require('app/functions.php');
 includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'headCSS' => ['page/top.css']]) ?>
 <section class="p-mv">
-    <img class="bg__monitor u-d-n-responsive" src="<?= resource('img', 'raw/mv-monitor.png'); ?>" alt="">
-    <img class="bg__monitor-sp u-d-n-laptop" src="<?= resource('img', 'raw/mv-monitor-sp.png'); ?>" alt="">
+    <img class="bg__monitor u-d-n-responsive" src="<?= resource('img', 'raw/mv-monitor.png'); ?>" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
+    <img class="bg__monitor-sp u-d-n-laptop" src="<?= resource('img', 'raw/mv-monitor-sp.png'); ?>" alt="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
     <div class="l-wrap p-mv__container">
         <div class="p-mv__content">
-            <div class="row">
+            <!-- add classes for animation -->
+            <div class="row appear-animation animated">
                 <div class="col">
                     <div class="welcome">
                         <p class="c-heading01__main c-heading01__main--left c-heading01__main--big">次に売る商材が、<span>sales partner</span></p>
@@ -29,11 +30,13 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 </section>
 <section class="sect_1" id="sect_1">
     <div class="l-wrap">
-        <p class="sect_1__heading">
+        <!-- add data-aos -->
+        <p class="sect_1__heading" data-aos="fade-up" data-aos-duration="1000">
             供給と需要を<span>自動的</span>かつ<span><br class="u-d-n-laptop">リアルタイム</span>に最適に<br class="u-d-n-laptop">マッチさせることで、<br>
             パートナー販売チャネルの<br class="u-d-n-laptop"><span>売上を最大化</span>します。
         </p>
-        <div class="sect_1__content">
+        <!-- add data-aos -->
+        <div class="sect_1__content" data-aos="fade-up" data-aos-duration="1000">
             <img src="<?= resource('img', 'raw/sect_1-img01.png'); ?>" alt="sect1 image01" class="sect_1-img01 u-d-n-responsive">
             <img src="<?= resource('img', 'raw/sect_1-img01-sp.png'); ?>" alt="sect1 image01" class="sect_1-img01 u-d-n-laptop">
             <img src="<?= resource('img', 'raw/sect_1-img02-sp.png'); ?>" alt="sect1 image02" class="sect_1-img02 u-d-n-laptop">
@@ -58,7 +61,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 </section>
 <section class="sect_2" id="sect_2">
     <div class="l-wrap">
-        <div class="sect_2__heading">
+        <div class="sect_2__heading" data-aos="fade-up" data-aos-duration="1000">
             <img class="exclamation" src="<?= resource('img', 'icon/icon_exclamation.svg'); ?>" alt="">
             <h2 class="c-heading02__sub">商材を販売したいパートナー様、<br class="u-d-n-laptop">こんな課題はございませんか？</h2>
         </div>
@@ -96,7 +99,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         ];
 
         ?>
-        <div class="p-row03 u-natural__width">
+        <div class="p-row03 u-natural__width" data-aos="fade-up" data-aos-duration="1000">
             <?php foreach ($loopContent01 as $loop01) : ?>
                 <a href="#<?= $loop01['href'] ?>" class="p-row03__col c-card01 c-card01--arrowdown issue__link">
                     <div class="c-card01__frame">
@@ -157,7 +160,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         <div class="p-content01 u-natural__width">
             <div class="p-content01__main">
                 <?php foreach ($loopContent02 as $loop02) : ?>
-                    <div class="sect_3--content" id="<?= $loop02['id']; ?>">
+                    <!-- add data-aos -->
+                    <div class="sect_3--content" id="<?= $loop02['id']; ?>" data-aos="fade-up" data-aos-duration="1000">
                         <div class="p-content01__row">
                             <div class="p-content01__col">
                                 <p class="p-content01__ttl"><?= $loop02['ttl']; ?></p>
@@ -185,14 +189,16 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 <section class="sect_4" id="sect_4">
     <div class="p-content02">
         <div class="p-content02__row">
-            <div class="p-content02__col">
+            <!-- add data-aos -->
+            <div class="p-content02__col" data-aos="fade-up" data-aos-duration="1000">
                 <p class="heading">
                     さっそく</span>partner drive<span>を<br>
                         使ってみましょう
                 </p>
                 <a class="c-button c-button--xxl c-button--accent--d c-button--return" href="#"><span>partner drive</span>をはじめる</a>
             </div>
-            <div class="p-content02__col">
+            <!-- add data-aos -->
+            <div class="p-content02__col" data-aos="fade-up" data-aos-duration="1000">
                 <p class="heading">取り扱い商材も様々</p>
                 <ul class="sect_4__slider">
                     <?php
@@ -252,8 +258,12 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
     </div>
     <div class="features u-natural__width">
         <div class="l-wrap">
-            <p class="c-heading01__main c-heading01__main--left">partner driveの機能<span>features</span></p>
-            <div class="features__content">
+            <!-- add appear animation container -->
+            <div class="appear-container appear-animation">
+                <p class="c-heading01__main c-heading01__main--left">partner driveの機能<span>features</span></p>
+            </div>
+            <!-- add data-aos -->
+            <div class="features__content" data-aos="fade-up" data-aos-duration="1000">
                 <div class="row">
                     <div class="col">
                         <div class="left">
@@ -307,7 +317,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             </div>
         </div>
     </div>
-    <div class="takealook u-natural__width">
+    <!-- add data-aos -->
+    <div class="takealook u-natural__width" data-aos="fade-up" data-aos-duration="1000">
         <div class="l-wrap">
             <p class="heading">各機能を見てみる</p>
             <div class="content">
@@ -335,7 +346,10 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 </section>
 <section class="sect_5" id="sect_5">
     <div class="l-wrap">
-        <p class="u-f-ta-c c-heading01__main">ご利用までの流れ<span>Step</span></p>
+        <!-- add appear animation container -->
+        <div class="appear-container appear-container--center appear-animation">
+            <p class="u-f-ta-c c-heading01__main">ご利用までの流れ<span>Step</span></p>
+        </div>
         <div class="sect_5__content">
             <?php
             $loopContent03 = [
@@ -368,7 +382,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                 ],
             ];
             ?>
-            <div class="row">
+            <!-- add data-aos -->
+            <div class="row" data-aos="fade-up" data-aos-duration="1000">
                 <?php foreach ($loopContent03 as $loop) : ?>
                     <div class="col">
                         <div class="left">
@@ -388,22 +403,28 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 <section class="sect_6" id="sect_6">
     <div class="p-content02">
         <div class="p-content02__row u-d-f-s">
-            <div class="p-content02__col p-content02__col--right">
+            <!-- add data-aos -->
+            <div class="p-content02__col p-content02__col--right" data-aos="fade-up" data-aos-duration="1000">
                 <p class="heading">
                     さっそく</span>partner drive<span>を<br>
                         使ってみましょう
                 </p>
                 <a class="c-button c-button--xxl c-button--accent--d c-button--return" href="#"><span>partner drive</span>をはじめる</a>
             </div>
-            <div class="p-content02__col p-content02__col--flex">
+            <!-- add data-aos -->
+            <div class="p-content02__col p-content02__col--flex" data-aos="fade-up" data-aos-duration="1000">
                 <img src="<?= resource('img', 'raw/sect_6-img01.png'); ?>" alt="sect_6-img01">
             </div>
         </div>
     </div>
     <div class="cases">
         <div class="l-wrap">
-            <p class="u-f-ta-c c-heading01__main">導入事例<span>case</span></p>
-            <div class="cases__content">
+            <!-- add appear animation container -->
+            <div class="appear-container appear-container--center appear-animation">
+                <p class="u-f-ta-c c-heading01__main">導入事例<span>case</span></p>
+            </div>
+            <!-- add data-aos -->
+            <div class="cases__content" data-aos="fade-up" data-aos-duration="1000">
                 <?php
                 $caseLoop = [
                     [
@@ -448,18 +469,21 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
                     <?php endforeach; ?>
                 </ul>
             </div>
-            <a href="#" class="c-button c-button--accent c-button--l u-m-c">導入事例をもっと見る</a>
+            <!-- add data-aos -->
+            <a href="#" class="c-button c-button--accent c-button--l u-m-c" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor=".cases__content">導入事例をもっと見る</a>
         </div>
     </div>
 </section>
 <section class="sect_7" id="sect_7">
     <div class="l-wrap">
         <div class="news__row u-natural__width">
-            <div class="news__col">
+            <!-- add appear animation container 02 -->
+            <div class="news__col appear-container02 appear-animation">
                 <p class="c-heading01__main c-heading01__main--left">お知らせ<span>news</span></p>
                 <a href="#" class="c-button c-button--accent c-button--l u-d-n-responsive">お知らせ一覧を見る</a>
             </div>
-            <div class="news__col">
+            <!-- add data-aos -->
+            <div class="news__col" data-aos="fade-up" data-aos-duration="1000">
                 <div class="news__list">
                     <div class="news__listItem">
                         <div class="heading">
@@ -492,7 +516,10 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 </section>
 <section class="faq" id="faq">
     <div class="l-wrap">
-        <p class="u-f-ta-c c-heading01__main">よくある質問<span>Q&A</span></p>
+        <!-- add appear animation container -->
+        <div class="appear-container appear-container--center appear-animation">
+            <p class="u-f-ta-c c-heading01__main">よくある質問<span>Q&A</span></p>
+        </div>
         <?php
         $faqValue = [
             [
@@ -544,7 +571,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
     </div>
 </section>
 <section class="get__started" id="get__started">
-    <div class="l-wrap">
+    <!-- add data-aos -->
+    <div class="l-wrap" data-aos="fade-up" data-aos-duration="1000">
         <p class="get__started_heading">さっそく<span>partner drive</span><br class="u-d-n-laptop">を使ってみましょう。</p>
         <div class="get__started_buttons">
             <a class="c-button c-button--xl c-button--accent--w c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_download.svg'); ?>" alt=""> 資料ダウンロード</a>
@@ -554,7 +582,10 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
 </section>
 <section class="p-form">
     <div class="l-wrap">
-        <p class="u-f-ta-c c-heading01__main">お問い合わせ<span>contact</span></p>
+        <!-- add appear animation container -->
+        <div class="appear-container appear-container--center appear-animation">
+            <p class="u-f-ta-c c-heading01__main">お問い合わせ<span>contact</span></p>
+        </div>
         <p class="u-f-ta-c c-heading01__sub">以下フォームをご記入の上<br class="u-d-n-laptop">お問い合わせください。</p>
 
         <div class="p-form__inner u-natural__width">
@@ -622,8 +653,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img01.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>
@@ -638,8 +669,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img02.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>
@@ -654,8 +685,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img03.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>
@@ -670,8 +701,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img04.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-        <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-        <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>

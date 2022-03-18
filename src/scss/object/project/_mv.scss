@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   @include is-responsive {
-    height: 812px;
+    height: 794px;
     &__container {
       max-width: unset !important;
     }
@@ -42,9 +42,12 @@
     }
   }
   &__content {
-    padding-top: 193px;
-    @include is-responsive {
-      padding-top: 135px;
+    padding-top: 100px;
+    .row {
+      padding-top: 93px;
+      @include is-responsive {
+        padding-top: 35px;
+      }
     }
     .welcome {
       padding-left: 50px;
@@ -147,7 +150,7 @@
     @include is-max(376px) {
       transform: scale(1.3);
       right: -69px;
-      bottom: 6%;
+      bottom: 9%;
     }
     @include is-max(360px) {
       bottom: 10%;
@@ -162,7 +165,7 @@
     @include is-responsive {
       left: 16px;
       z-index: 7;
-      bottom: -376px;
+      bottom: -335px;
     }
     span {
       width: 32px;

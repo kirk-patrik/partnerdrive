@@ -1,0 +1,69 @@
+.appear-animation {
+  -webkit-mask-image: linear-gradient(
+    135deg,
+    #000 0,
+    #000 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    135deg,
+    #000 0,
+    #000 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: 300%;
+  mask-position: right center;
+  &.animated {
+    animation-name: move;
+    animation-delay: 2.9s;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+  @keyframes move {
+    100% {
+      -webkit-mask-position: left center;
+    }
+  }
+}
+
+.appear-container {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  margin-top: -149px;
+  @include is-responsive {
+    height: 120px;
+    margin-top: -99px;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &.animated {
+    animation-name: move;
+    animation-delay: .2s !important;
+    animation-duration: 4s !important;
+    animation-fill-mode: both;
+  }
+  @keyframes move {
+    100% {
+      -webkit-mask-position: left center;
+    }
+  }
+}
+
+.appear-container02 {
+    &.animated {
+      animation-name: move;
+      animation-delay: .2s !important;
+      animation-duration: 2s !important;
+      animation-fill-mode: both;
+    }
+    @keyframes move {
+      100% {
+        -webkit-mask-position: left center;
+      }
+    }
+  }

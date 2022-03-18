@@ -15,12 +15,18 @@
     <!-- end font -->
     <!-- style -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- add data-aos css link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="<?= resource('css', 'style.css') ?>" />
     <link rel="stylesheet" href="<?= resource('iconfont', 'iconfont.css') ?>" />
     <?= resources('css', isset($headCSS) ? $headCSS : '', true) ?>
     <!-- end style -->
 </head>
+<!-- ADD LOADING -->
+<div id="loading">
+    <img src="<?= resource('img', 'raw/partnerdrive_logo.svg'); ?>" alt="">
+</div>
 
 <body class="page">
     <header class="l-header page__top <?= trim($_SERVER['PHP_SELF'], '/') == 'rules.php' ? 'activate' : '' ?>">
@@ -60,8 +66,8 @@
                 <li><a href="#">お知らせ</a></li>
             </ul>
             <div class="spMenuItem__buttons">
-            <a class="c-button c-button--xl c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_download.svg'); ?>" alt=""> 資料ダウンロード</a>
-            <a class="c-button c-button--xl c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_user-sp.svg'); ?>" alt=""> 新規登録・ログイン</a>
+                <a class="c-button c-button--xl c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_download.svg'); ?>" alt=""> 資料ダウンロード</a>
+                <a class="c-button c-button--xl c-button--main c-button--return" href="#"><img src="<?= resource('img', 'icon/icon_user-sp.svg'); ?>" alt=""> 新規登録・ログイン</a>
             </div>
         </div>
         <!-- header end here -->

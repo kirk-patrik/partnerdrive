@@ -19,7 +19,8 @@
                     <li><a href="#"><span>お問い合わせ</span></a></li>
                 </ul>
                 <ul class="l-footer__menu02">
-                    <li><a href="/rules.php">利用規約</a></li>
+                    <!-- add links -->
+                    <li><a href="/rules">利用規約</a></li>
                     <li><a href="https://global-cast.co.jp/privacypolicy/">プライバシーポリシー<img src="<?= resource('img', 'icon/icon_box-arrow.svg'); ?>" alt=""></a></li>
                 </ul>
                 <p class="copyright u-d-n-laptop">© GlobalCast Co.,Ltd.</p>
@@ -30,7 +31,17 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- add data-aos script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- script here for global -->
     <?= resources('js', isset($footerJS) ? $footerJS : '', true) ?>
+    <!-- initialize data-aos script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                once: true
+            });
+        });
+    </script>
 
     </html>

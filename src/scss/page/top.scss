@@ -156,6 +156,18 @@
       @include is-laptop {
         height: 233px;
       }
+      &.isAdded {
+        animation: appearCard .1s .5s forwards;
+        opacity: 0;
+      }
+      @keyframes appearCard {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     }
   }
   .features {
@@ -705,6 +717,9 @@
         z-index: 2;
         cursor: pointer;
       }
+      .slick-disabled {
+        display: none !important;
+      }
       .slick-prev {
         top: 41%;
         transform: translateY(-50%);
@@ -733,6 +748,12 @@
   }
   .news__col {
     &:first-child {
+      width: calc(100% - 550px);
+      padding-top: 48px;
+      @include is-responsive {
+        width: 100%;
+        margin-top: -48px;
+      }
       a {
         margin-top: 53px;
       }
