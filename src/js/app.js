@@ -74,12 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentActive = document.querySelector('.sect_4__slider .slick-current');
         let currentActiveIndex = currentActive.getAttribute('data-slick-index');
         let w = $(window).width();
+        // modified
         let scrolledLast;
         if (w > 992) {
             scrolledLast = document.querySelector('.sect_4__slider .slick-slide[data-slick-index="' + (parseInt(currentActiveIndex) + 3) + '"]');
         } else {
             scrolledLast = document.querySelector('.sect_4__slider .slick-slide[data-slick-index="' + (parseInt(currentActiveIndex) + 2) + '"]');
         }
+        // end modified
         $(scrolledLast).addClass('isAdded').siblings().removeClass('isAdded');
     });
     $('.sect_4__slider').slick('slickGoTo', 1);
@@ -154,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalParent04.classList.replace('p-modal--active', 'p-modal--close');
     });
 
-    // modal navigation
+    // add modal navigation
     let modalPrev = document.querySelectorAll('a[modal-prev]');
     let modalNext = document.querySelectorAll('a[modal-next]');
     modalPrev.forEach((i) => {
