@@ -642,7 +642,7 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
         </div>
     </div>
 </section>
-<div class="p-modal p-modal01 p-modal--close">
+<div class="p-modal p-modal01 p-modal--close" modal-index="1">
     <div class="p-modal__content">
         <ul class="toggler modalClose">
             <li class="togglerItem"></li>
@@ -653,12 +653,12 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img01.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" modal-prev="4" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" modal-next="2" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>
-<div class="p-modal p-modal02 p-modal--close">
+<div class="p-modal p-modal02 p-modal--close" modal-index="2">
     <div class="p-modal__content">
         <ul class="toggler modalClose">
             <li class="togglerItem"></li>
@@ -669,12 +669,12 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img02.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" modal-prev="1" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" modal-next="3" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>
-<div class="p-modal p-modal03 p-modal--close">
+<div class="p-modal p-modal03 p-modal--close" modal-index="3">
     <div class="p-modal__content">
         <ul class="toggler modalClose">
             <li class="togglerItem"></li>
@@ -685,12 +685,12 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img03.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" modal-prev="2" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" modal-next="4" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>
-<div class="p-modal p-modal04 p-modal--close">
+<div class="p-modal p-modal04 p-modal--close" modal-index="4">
     <div class="p-modal__content">
         <ul class="toggler modalClose">
             <li class="togglerItem"></li>
@@ -701,8 +701,8 @@ includeWithVariables('includes/header.php', ['pageTitle' => 'partner drive', 'he
             <img src="<?= resource('img', 'raw/modal-img04.png'); ?>" alt="">
         </div>
         <div class="p-modal__buttons">
-            <a href="#" class="c-button" id="modalPrev">前の機能を見る</a>
-            <a href="#" class="c-button c-button--accent" id="modalNext">次の機能を見る</a>
+            <a href="#" class="c-button" modal-prev="3" id="modalPrev">前の機能を見る</a>
+            <a href="#" class="c-button c-button--accent" modal-next="1" id="modalNext">次の機能を見る</a>
         </div>
     </div>
 </div>

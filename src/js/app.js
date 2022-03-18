@@ -73,9 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
     $('.sect_4__slider').on('beforeChange', () => {
         let currentActive = document.querySelector('.sect_4__slider .slick-current');
         let currentActiveIndex = currentActive.getAttribute('data-slick-index');
-        let scrolledLast = document.querySelector('.sect_4__slider .slick-slide[data-slick-index="' + (parseInt(currentActiveIndex) + 3) + '"]');
+        let w = $(window).width();
+        let scrolledLast;
+        if (w > 992) {
+            scrolledLast = document.querySelector('.sect_4__slider .slick-slide[data-slick-index="' + (parseInt(currentActiveIndex) + 3) + '"]');
+        } else {
+            scrolledLast = document.querySelector('.sect_4__slider .slick-slide[data-slick-index="' + (parseInt(currentActiveIndex) + 2) + '"]');
+        }
         $(scrolledLast).addClass('isAdded').siblings().removeClass('isAdded');
-
     });
     $('.sect_4__slider').slick('slickGoTo', 1);
 
@@ -147,6 +152,26 @@ document.addEventListener("DOMContentLoaded", function () {
         modalParent02.classList.replace('p-modal--active', 'p-modal--close');
         modalParent03.classList.replace('p-modal--active', 'p-modal--close');
         modalParent04.classList.replace('p-modal--active', 'p-modal--close');
+    });
+
+    // modal navigation
+    let modalPrev = document.querySelectorAll('a[modal-prev]');
+    let modalNext = document.querySelectorAll('a[modal-next]');
+    modalPrev.forEach((i) => {
+        i.addEventListener('click', (e) => {
+            e.preventDefault();
+            let toBe = document.querySelector('.p-modal[modal-index="' + i.getAttribute('modal-prev') + '"]');
+            toBe.classList.replace('p-modal--close', 'p-modal--active');
+            i.parentElement.parentElement.parentElement.classList.replace('p-modal--active', 'p-modal--close');
+        });
+    });
+    modalNext.forEach((i) => {
+        i.addEventListener('click', (e) => {
+            e.preventDefault();
+            let toBe = document.querySelector('.p-modal[modal-index="' + i.getAttribute('modal-next') + '"]');
+            toBe.classList.replace('p-modal--close', 'p-modal--active');
+            i.parentElement.parentElement.parentElement.classList.replace('p-modal--active', 'p-modal--close');
+        });
     });
 
     window.onscroll = () => {
